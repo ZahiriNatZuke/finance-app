@@ -23,13 +23,35 @@
       "my-data": "Personal Information",
       "logout": "Logout"
     },
+    "filter": {
+      "label": "Sort by:",
+      "start-date": "Entry Date",
+      "end-date": "Out Date",
+      "kind-op": "Type Operation",
+      "profitability-obtained": "Profitability Obtained"
+    },
     "global-position": {
-      "my-data": "Personal Information",
-      "info": "If you wish to modify your personal data, please contact us at 911 548 520."
+      "info": "(1) Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cumque debitis dolore doloremque, esse eum molestiae odit omnis porro sed!",
+      "capital-investment": "Total capital in active investments:",
+      "profit": "Interest accrued current period:",
+      "media-profit": "Average accumulated profitability:",
+      "active-investment": "Active investments",
+      "investment": "Investment:",
+      "obj-profitability": "Objective Profitability:",
+      "accrued-profit": "Int. Accrued:",
+      "kind-op": "Type of Operation:",
+      "start-date": "D. entry:",
+      "end-date": "D. expiration:",
+      "active-investment-detail": "Active Investments Detail",
+      "obj-profitability-resume": "Rent. Obj:",
+      "accrued-interest": "Obj.e Prof.:",
+      "entry": "Entry:",
+      "expiration": "Expiration:"
     },
     "investment-history": {
     },
     "personal-data": {
+      "info": "If you wish to modify your personal data, please contact us at 911 548 520."
     }
   }
 }

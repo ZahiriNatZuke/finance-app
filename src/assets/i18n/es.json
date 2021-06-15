@@ -23,13 +23,35 @@
       "my-data": "Mis Datos",
       "logout": "Desconectar"
     },
+    "filter": {
+      "label": "Ordenar por:",
+      "start-date": "Fecha Entrada",
+      "end-date": "Fecha Salida",
+      "kind-op": "Tipo Operación",
+      "profitability-obtained": "Rentabilidad Obtenida"
+    },
     "global-position": {
-      "my-data": "Mis Datos",
-      "info": "Si deseas modificar tus datos personales ponte en contacto con nosotros en el teléfono 911 548 520."
+      "info": "(1) Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cumque debitis dolore doloremque, esse eum molestiae odit omnis porro sed!",
+      "capital-investment": "Total capital en inversiones activas:",
+      "profit": "Intereses devengados periodo actual:",
+      "media-profit": "Rentabilidad media acumulada:",
+      "active-investment": "Inversiones activas",
+      "investment": "Inversión:",
+      "obj-profitability": "Rentabilidad Objetiva:",
+      "accrued-profit": "Int. devengados:",
+      "kind-op": "Tipo de Operación:",
+      "start-date": "F. entrada:",
+      "end-date": "F. vencimiento:",
+      "active-investment-detail": "Detalle Inversiones Activas",
+      "obj-profitability-resume": "Rent. Obj:",
+      "accrued-interest": "Intereses Devengados:",
+      "entry": "Entrada:",
+      "expiration": "Vencimiento:"
     },
     "investment-history": {
     },
     "personal-data": {
+      "info": "Si deseas modificar tus datos personales ponte en contacto con nosotros en el teléfono 911 548 520."
     }
   }
 }
