@@ -1,10 +1,14 @@
-<div class="login-container" fxLayout="column" fxLayoutAlign="center center">
-  <mat-card class="login">
-    <mat-card-header class="full-width pb-20" fxLayoutAlign="center center" fxLayout="row">
+<div class="login-container" fxLayout="column" fxLayoutAlign.lt-md="start center"
+     fxLayoutAlign.gt-sm="center center" fxFill>
+
+  <mat-card ngClass.lt-md="login-sm" ngClass.gt-sm="login">
+
+    <mat-card-header ngClass.lt-md="pb-90" ngClass.gt-sm="pb-20" fxLayoutAlign="center center" fxLayout="row">
       <app-brand-logo [bg]="'black'"></app-brand-logo>
     </mat-card-header>
 
     <form [formGroup]="loginForm" (ngSubmit)="LoginRequest()" novalidate>
+
       <mat-card-content>
         <mat-form-field class="full-width" appearance="outline">
           <mat-icon matPrefix>person_outline</mat-icon>
@@ -35,6 +39,13 @@
           Entrar
         </button>
       </mat-card-actions>
+
     </form>
+
   </mat-card>
+
+  <p ngClass.lt-md="info bg-transparent-50" ngClass.gt-sm="info">
+    Si no recuerdas tus claves de acceso ponte en contacto con nosotros en el teléfono 911 548 520
+  </p>
+
 </div>
