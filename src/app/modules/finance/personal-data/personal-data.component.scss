@@ -3,14 +3,17 @@
 .personal-data-container {
   padding: 2rem;
 
-  .header {
+  .header-md {
     width: 80%;
+  }
 
-    .title {
-      font-weight: bold;
-      font-size: 36px;
-    }
+  .header-lg {
+    width: 50%;
+  }
 
+  .title {
+    font-weight: bold;
+    font-size: 36px;
   }
 
   .data {
