@@ -17,7 +17,15 @@
     }
   },
   "finance": {
+    "nav": {
+      "global-position": "Posición Global",
+      "investment-history": "Histórico de Inversiones",
+      "my-data": "Mis Datos",
+      "logout": "Desconectar"
+    },
     "global-position": {
+      "my-data": "Mis Datos",
+      "info": "Si deseas modificar tus datos personales ponte en contacto con nosotros en el teléfono 911 548 520."
     },
     "investment-history": {
     },

@@ -6,8 +6,16 @@
 
     <div class="menu" fxShow="true" fxHide.lt-md>
       <ul>
-        <li><a routerLink="/finance/global-position" routerLinkActive="active">Posición Global</a></li>
-        <li><a routerLink="/finance/investment-history" routerLinkActive="active">Histórico de Inversiones</a></li>
+        <li>
+          <a routerLink="/finance/global-position" routerLinkActive="active">
+            {{'finance.nav.global-position' | translate}}
+          </a>
+        </li>
+        <li>
+          <a routerLink="/finance/investment-history" routerLinkActive="active">
+            {{'finance.nav.investment-history' | translate}}
+          </a>
+        </li>
       </ul>
     </div>
 
@@ -24,8 +32,12 @@
           <mat-icon>{{userMenuOpened ? 'expand_more' : 'expand_less'}}</mat-icon>
         </button>
         <mat-menu #menu="matMenu" [class]="'bg-menu'" (closed)="userMenuOpened = false">
-          <a mat-menu-item routerLink="/finance/personal-data" class="white-color">Mis Datos</a>
-          <a mat-menu-item (click)="logout()" class="white-color">Desconectar</a>
+          <a mat-menu-item routerLink="/finance/personal-data" class="white-color">
+            {{'finance.nav.my-data' | translate}}
+          </a>
+          <a mat-menu-item (click)="logout()" class="white-color">
+            {{'finance.nav.logout' | translate}}
+          </a>
         </mat-menu>
       </div>
       <span class="user-info">Charles Martin</span>
@@ -55,13 +67,13 @@
 
     <mat-nav-list class="nav-list">
       <a mat-menu-item routerLink="/finance/personal-data" routerLinkActive="active" (click)="sidenav.toggle()">
-        Mis Datos
+        {{'finance.nav.my-data' | translate}}
       </a>
       <a mat-list-item routerLink="/finance/global-position" routerLinkActive="active" (click)="sidenav.toggle()">
-        Posición Global
+        {{'finance.nav.global-position' | translate}}
       </a>
       <a mat-list-item routerLink="/finance/investment-history" routerLinkActive="active" (click)="sidenav.toggle()">
-        Histótico de Inversiones
+        {{'finance.nav.investment-history' | translate}}
       </a>
     </mat-nav-list>
   </mat-sidenav>

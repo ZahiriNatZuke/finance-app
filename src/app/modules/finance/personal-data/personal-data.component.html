@@ -1,8 +1,11 @@
 <div fxLayout="column" fxLayoutAlign.gt-sm="center center" fxLayoutGap="30px" ngClass.gt-sm="personal-data-container"
      fxFill ngClass.lt-md="personal-data-container-sm" fxLayoutAlign.lt-md="start center">
 
-  <div ngClass.gt-sm="header-md" ngClass.gt-lg="header-lg" ngClass.lt-md="header-sm" fxLayout="row" fxLayoutAlign="start center">
-    <h1 ngClass.gt-sm="title text-primary" ngClass.lt-md="title white-color">Mis Datos</h1>
+  <div ngClass.gt-sm="header-md" ngClass.gt-lg="header-lg" ngClass.lt-md="header-sm" fxLayout="row"
+       fxLayoutAlign="start center">
+    <h1 ngClass.gt-sm="title text-primary" ngClass.lt-md="title white-color">
+      {{'finance.global-position.my-data' | translate}}
+    </h1>
   </div>
 
   <div ngClass.lt-md="data-sm" ngClass.gt-sm="data mat-elevation-z4">
@@ -34,6 +37,6 @@
     </ul>
   </div>
   <p class="contact-info">
-    Si deseas modificar tus datos personales ponte en contacto con nosotros en el teléfono <b>911 548 520</b>.
+    {{'finance.global-position.info' | translate}}
   </p>
 </div>

@@ -17,7 +17,15 @@
     }
   },
   "finance": {
+    "nav": {
+      "global-position": "Global Position",
+      "investment-history": "Investment History",
+      "my-data": "Personal Information",
+      "logout": "Logout"
+    },
     "global-position": {
+      "my-data": "Personal Information",
+      "info": "If you wish to modify your personal data, please contact us at 911 548 520."
     },
     "investment-history": {
     },
