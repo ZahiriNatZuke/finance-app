@@ -8,6 +8,11 @@ import {MatMenuModule} from '@angular/material/menu';
 import es from '@angular/common/locales/es';
 import {registerLocaleData} from '@angular/common';
 
+// import ngx-translate and the http loader
+import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
+
 registerLocaleData(es);
 
 @NgModule({
@@ -16,6 +21,15 @@ registerLocaleData(es);
   ],
   imports: [
     BrowserModule,
+    // ngx-translate and the loader module
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    }),
     AppRoutingModule,
     BrowserAnimationsModule,
     MatMenuModule
@@ -30,4 +44,8 @@ registerLocaleData(es);
   ]
 })
 export class AppModule {
+}
+
+export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
+  return new TranslateHttpLoader(http);
 }
