@@ -4,7 +4,7 @@
   <div>
     <div ngClass.lt-md="header-sm" fxLayout="row" fxLayoutAlign="start center">
       <h1 ngClass.gt-sm="title text-primary" ngClass.lt-md="title white-color">
-        Resumen Inversiones cerradas
+        {{'finance.investment-history.title' | translate}}
       </h1>
     </div>
 
@@ -17,7 +17,7 @@
         <li fxLayout.gt-sm="row" fxLayout.lt-md="column" fxLayoutGap="10px" fxLayoutAlign.gt-sm="space-between end"
             fxLayoutAlign.lt-md="center start">
           <p class="text-data">
-            Interes generado:
+            {{'finance.investment-history.generated-interest' | translate}}
           </p>
           <p class="currency-data">
             {{ 275000 | currency}}
@@ -27,7 +27,7 @@
         <li fxLayout.gt-sm="row" fxLayout.lt-md="column" fxLayoutGap="10px" fxLayoutAlign.gt-sm="space-between end"
             fxLayoutAlign.lt-md="center start">
           <p class="text-data">
-            Rentabilidad media:
+            {{'finance.investment-history.media-profitability' | translate}}
           </p>
           <p class="currency-data">
             {{ 0.1113 | percent:'.0-2'}}
@@ -37,8 +37,7 @@
       </ul>
 
       <p class="info">
-        (1) Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cumque debitis dolore doloremque,
-        esse eum molestiae odit omnis porro sed!
+        {{'finance.investment-history.info' | translate}}
       </p>
     </div>
 
@@ -208,25 +207,27 @@
   <div fxLayout="column" fxShow="true" fxHide.gt-sm class="full-width">
     <div ngClass.lt-md="header-sm" fxLayout="row" fxLayoutAlign="start center">
       <h1 ngClass.gt-sm="title text-primary" ngClass.lt-md="title-sm white-color">
-        Histórico Inversiones cerradas
+        {{'finance.investment-history.header-detail' | translate}}
       </h1>
     </div>
 
     <div fxLayout="row" fxLayoutAlign="center center" class="full-width">
-      <span class="filter-text">Ordenar por:</span>
+      <span class="filter-text">
+        {{'finance.filter.label' | translate}}
+      </span>
       <mat-form-field appearance="outline" class="pl-10">
         <mat-select>
           <mat-option value="Fecha Entrada">
-            Fecha Entrada
+            {{'finance.filter.start-date' | translate}}
           </mat-option>
           <mat-option value="Fecha Salida">
-            Fecha Salida
+            {{'finance.filter.end-date' | translate}}
           </mat-option>
           <mat-option value="Tipo Operación">
-            Tipo Operación
+            {{'finance.filter.kind-op' | translate}}
           </mat-option>
           <mat-option value="Rentabilidad Optenida">
-            Rentabilidad Optenida
+            {{'finance.filter.profitability-obtained' | translate}}
           </mat-option>
         </mat-select>
       </mat-form-field>
@@ -239,14 +240,28 @@
           <span class="company-name">Europa Avenida (MTC)</span>
         </div>
         <div fxLayout="row" fxLayoutAlign="space-between center" class="full-width pb-10">
-          <span class="info-investment">Inversón:&nbsp;<b class="text-primary">{{100000 | currency}}</b></span>
-          <span class="info-investment">Rent. Obj:&nbsp;<b class="text-primary">{{0.09 | percent:'.0-2'}}</b></span>
+          <span class="info-investment">
+            {{'finance.investment-history.investment' | translate}}&nbsp;
+            <b class="text-primary">{{100000 | currency}}</b>
+          </span>
+          <span class="info-investment">
+            {{'finance.investment-history.obj-profitability-resume' | translate}}&nbsp;
+            <b class="text-primary">{{0.09 | percent:'.0-2'}}</b>
+          </span>
         </div>
-        <span class="info-investment pb-10">Intereses Devengados:&nbsp;<b class="text-primary">{{10546 | currency}}</b></span>
+        <span class="info-investment pb-10">
+          {{'finance.investment-history.accrued-interest' | translate}}&nbsp;
+          <b class="text-primary">{{10546 | currency}}</b>
+        </span>
         <div fxLayout="row" fxLayoutAlign="space-between center" class="full-width pb-10">
-          <span class="info-investment">Entrada:&nbsp;{{'Tue Jun 15 2021 12:01:00 GMT-0400' | date:'M/d/yyyy'}}</span>
-          <span
-            class="info-investment">Vencimiento:&nbsp;{{'Tue Jun 15 2021 12:01:00 GMT-0400' | date:'M/d/yyyy'}}</span>
+          <span class="info-investment">
+            {{'finance.investment-history.entry' | translate}}&nbsp;
+            {{'Tue Jun 15 2021 12:01:00 GMT-0400' | date:'M/d/yyyy'}}
+          </span>
+          <span class="info-investment">
+            {{'finance.investment-history.expiration' | translate}}&nbsp;
+            {{'Tue Jun 15 2021 12:01:00 GMT-0400' | date:'M/d/yyyy'}}
+          </span>
         </div>
       </li>
       <li class="active-investment-detail" fxLayout="column" fxLayoutAlign="center start">
@@ -255,14 +270,28 @@
           <span class="company-name">Europa Avenida (MTC)</span>
         </div>
         <div fxLayout="row" fxLayoutAlign="space-between center" class="full-width pb-10">
-          <span class="info-investment">Inversón:&nbsp;<b class="text-primary">{{100000 | currency}}</b></span>
-          <span class="info-investment">Rent. Obj:&nbsp;<b class="text-primary">{{0.09 | percent:'.0-2'}}</b></span>
+          <span class="info-investment">
+            {{'finance.investment-history.investment' | translate}}&nbsp;
+            <b class="text-primary">{{100000 | currency}}</b>
+          </span>
+          <span class="info-investment">
+            {{'finance.investment-history.obj-profitability-resume' | translate}}&nbsp;
+            <b class="text-primary">{{0.09 | percent:'.0-2'}}</b>
+          </span>
         </div>
-        <span class="info-investment pb-10">Intereses Devengados:&nbsp;<b class="text-primary">{{10546 | currency}}</b></span>
+        <span class="info-investment pb-10">
+          {{'finance.investment-history.accrued-interest' | translate}}&nbsp;
+          <b class="text-primary">{{10546 | currency}}</b>
+        </span>
         <div fxLayout="row" fxLayoutAlign="space-between center" class="full-width pb-10">
-          <span class="info-investment">Entrada:&nbsp;{{'Tue Jun 15 2021 12:01:00 GMT-0400' | date:'M/d/yyyy'}}</span>
-          <span
-            class="info-investment">Vencimiento:&nbsp;{{'Tue Jun 15 2021 12:01:00 GMT-0400' | date:'M/d/yyyy'}}</span>
+          <span class="info-investment">
+            {{'finance.investment-history.entry' | translate}}&nbsp;
+            {{'Tue Jun 15 2021 12:01:00 GMT-0400' | date:'M/d/yyyy'}}
+          </span>
+          <span class="info-investment">
+            {{'finance.investment-history.expiration' | translate}}&nbsp;
+            {{'Tue Jun 15 2021 12:01:00 GMT-0400' | date:'M/d/yyyy'}}
+          </span>
         </div>
       </li>
       <li class="active-investment-detail" fxLayout="column" fxLayoutAlign="center start">
@@ -271,14 +300,28 @@
           <span class="company-name">Europa Avenida (MTC)</span>
         </div>
         <div fxLayout="row" fxLayoutAlign="space-between center" class="full-width pb-10">
-          <span class="info-investment">Inversón:&nbsp;<b class="text-primary">{{100000 | currency}}</b></span>
-          <span class="info-investment">Rent. Obj:&nbsp;<b class="text-primary">{{0.09 | percent:'.0-2'}}</b></span>
+          <span class="info-investment">
+            {{'finance.investment-history.investment' | translate}}&nbsp;
+            <b class="text-primary">{{100000 | currency}}</b>
+          </span>
+          <span class="info-investment">
+            {{'finance.investment-history.obj-profitability-resume' | translate}}&nbsp;
+            <b class="text-primary">{{0.09 | percent:'.0-2'}}</b>
+          </span>
         </div>
-        <span class="info-investment pb-10">Intereses Devengados:&nbsp;<b class="text-primary">{{10546 | currency}}</b></span>
+        <span class="info-investment pb-10">
+          {{'finance.investment-history.accrued-interest' | translate}}&nbsp;
+          <b class="text-primary">{{10546 | currency}}</b>
+        </span>
         <div fxLayout="row" fxLayoutAlign="space-between center" class="full-width pb-10">
-          <span class="info-investment">Entrada:&nbsp;{{'Tue Jun 15 2021 12:01:00 GMT-0400' | date:'M/d/yyyy'}}</span>
-          <span
-            class="info-investment">Vencimiento:&nbsp;{{'Tue Jun 15 2021 12:01:00 GMT-0400' | date:'M/d/yyyy'}}</span>
+          <span class="info-investment">
+            {{'finance.investment-history.entry' | translate}}&nbsp;
+            {{'Tue Jun 15 2021 12:01:00 GMT-0400' | date:'M/d/yyyy'}}
+          </span>
+          <span class="info-investment">
+            {{'finance.investment-history.expiration' | translate}}&nbsp;
+            {{'Tue Jun 15 2021 12:01:00 GMT-0400' | date:'M/d/yyyy'}}
+          </span>
         </div>
       </li>
     </ul>

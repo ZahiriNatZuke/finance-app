@@ -7,6 +7,7 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
+import {TranslateModule} from '@ngx-translate/core';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import {MatSelectModule} from '@angular/material/select';
     FlexLayoutModule,
     MatExpansionModule,
     MatFormFieldModule,
-    MatSelectModule
+    MatSelectModule,
+    TranslateModule
   ]
 })
 export class InvestmentHistoryModule { }

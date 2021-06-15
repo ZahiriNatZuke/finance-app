@@ -44,11 +44,21 @@
       "end-date": "D. expiration:",
       "active-investment-detail": "Active Investments Detail",
       "obj-profitability-resume": "Rent. Obj:",
-      "accrued-interest": "Obj.e Prof.:",
+      "accrued-interest": "Accrued Interest:",
       "entry": "Entry:",
       "expiration": "Expiration:"
     },
     "investment-history": {
+      "title": "Summary Closed investments",
+      "generated-interest": "Interest generated:",
+      "media-profitability": "Average profitability:",
+      "info": "(1) Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cumque debitis dolore doloremque, esse eum molestiae odit omnis porro sed!",
+      "header-detail": "Historical Closed Investments",
+      "investment": "Investment:",
+      "obj-profitability-resume": "Rent. Obj:",
+      "accrued-interest": "Accrued Interest:",
+      "entry": "Entry:",
+      "expiration": "Expiration:"
     },
     "personal-data": {
       "info": "If you wish to modify your personal data, please contact us at 911 548 520."

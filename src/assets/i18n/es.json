@@ -49,6 +49,16 @@
       "expiration": "Vencimiento:"
     },
     "investment-history": {
+      "title": "Resumen Inversiones cerradas",
+      "generated-interest": "Interés generado:",
+      "media-profitability": "Rentabilidad media:",
+      "info": "(1) Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cumque debitis dolore doloremque, esse eum molestiae odit omnis porro sed!",
+      "header-detail": "Histórico Inversiones cerradas",
+      "investment": "Inversión:",
+      "obj-profitability-resume": "Rent. Obj:",
+      "accrued-interest": "Intereses Devengados:",
+      "entry": "Entrada:",
+      "expiration": "Vencimiento:"
     },
     "personal-data": {
       "info": "Si deseas modificar tus datos personales ponte en contacto con nosotros en el teléfono 911 548 520."
