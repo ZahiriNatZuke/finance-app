@@ -1,1 +1,38 @@
-<p>personal-data works!</p>
+<div fxLayout="column" fxLayoutAlign.gt-sm="center center" fxLayoutGap="30px" ngClass.gt-sm="personal-data-container"
+     fxFill
+     ngClass.lt-md="personal-data-container-sm" fxLayoutAlign.lt-md="start center">
+  <div ngClass.gt-sm="header" ngClass.lt-md="header-sm" fxLayout="row" fxLayoutAlign="start center">
+    <h1 ngClass.gt-sm="title text-primary" ngClass.lt-md="title white-color">Mis Datos</h1>
+  </div>
+  <div ngClass.lt-md="data-sm" ngClass.gt-sm="data mat-elevation-z4">
+    <ul>
+      <li fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="start end">
+        <mat-icon class="icon-data">person</mat-icon>
+        <div class="text-data">
+          <p>Carlos José Martín Pereira y Marta Gallardo Ruiz</p>
+        </div>
+      </li>
+      <li fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="start end">
+        <mat-icon class="icon-data">alternate_email</mat-icon>
+        <div class="text-data">
+          <p>cmartinpe@gmail.com</p>
+        </div>
+      </li>
+      <li fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="start end">
+        <mat-icon class="icon-data">call</mat-icon>
+        <div class="text-data">
+          <p>631106057</p>
+        </div>
+      </li>
+      <li fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="start end">
+        <mat-icon class="icon-data">house</mat-icon>
+        <div class="text-data">
+          <p>Avda. Lazarejo, 300 - 28232 - Las Rojas de Madrid - España</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <p class="contact-info">
+    Si deseas modificar tus datos personales ponte en contacto con nosotros en el teléfono <b>911 548 520</b>.
+  </p>
+</div>

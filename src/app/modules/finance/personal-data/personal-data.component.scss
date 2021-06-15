@@ -1,0 +1,100 @@
+@import 'src/assets/palette';
+
+.personal-data-container {
+  padding: 2rem;
+
+  .header {
+    width: 80%;
+
+    .title {
+      font-weight: bold;
+      font-size: 36px;
+    }
+
+  }
+
+  .data {
+    min-width: 700px;
+    border: solid thin black;
+    border-radius: 4px;
+    padding: 5px 10px;
+
+    ul {
+      list-style: none;
+    }
+
+    .icon-data {
+      font-size: 42px;
+      width: 42px;
+      height: 42px;
+    }
+
+    .text-data {
+      color: gray;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+  }
+
+  .contact-info {
+    font-size: 14px;
+    color: gray;
+  }
+
+}
+
+.personal-data-container-sm {
+
+  .header-sm {
+    background: $forest-green-web;
+    color: $baby-powder;
+    width: 100%;
+    padding: 10px 0 10px 10px;
+
+    .title {
+      font-size: 28px;
+      margin: 0;
+    }
+  }
+
+  .data-sm {
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0 0 0 5px;
+
+      li {
+        color: gray;
+        margin-bottom: 20px;
+
+        .icon-data {
+          font-size: 42px;
+          width: 42px;
+          height: 42px;
+        }
+
+        .text-data {
+          font-size: 12px;
+        }
+      }
+
+      li:last-child {
+        margin: 0;
+      }
+    }
+
+    p {
+      margin: 0;
+    }
+
+  }
+
+  .contact-info {
+    padding: 10px;
+    font-size: 12px;
+    color: $green-pantone;
+  }
+
+}

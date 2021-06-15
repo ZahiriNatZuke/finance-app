@@ -3,6 +3,9 @@ import { CommonModule } from '@angular/common';
 
 import { PersonalDataRoutingModule } from './personal-data-routing.module';
 import { PersonalDataComponent } from './personal-data.component';
+import {FlexLayoutModule} from '@angular/flex-layout';
+import {MatListModule} from '@angular/material/list';
+import {MatIconModule} from '@angular/material/icon';
 
 
 @NgModule({
@@ -11,7 +14,10 @@ import { PersonalDataComponent } from './personal-data.component';
   ],
   imports: [
     CommonModule,
-    PersonalDataRoutingModule
+    PersonalDataRoutingModule,
+    FlexLayoutModule,
+    MatListModule,
+    MatIconModule
   ]
 })
 export class PersonalDataModule { }

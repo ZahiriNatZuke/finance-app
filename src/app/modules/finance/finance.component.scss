@@ -96,11 +96,21 @@
 
   }
 
-  .nav-list a {
-    color: #cdcdcd;
+  .nav-list {
+    a {
+      color: #cdcdcd;
+    }
   }
+
 }
 
 .main-container {
   height: calc(100vh - 310px);
+  background: #232323;
+
+  .router-outlet-container {
+    background-color: white;
+    margin: 0 15px;
+    height: 100%;
+  }
 }
