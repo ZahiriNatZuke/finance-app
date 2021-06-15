@@ -8,6 +8,7 @@ import {Router} from '@angular/router';
 })
 export class FinanceComponent implements OnInit {
   public bg: string = 'white';
+  public userMenuOpened: boolean = false;
 
   constructor(private _router: Router) {
   }

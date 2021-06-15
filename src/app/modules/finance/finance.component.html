@@ -20,10 +20,10 @@
     <div class="user-menu" fxLayout="column" fxLayoutAlign="center center" fxShow="true" fxHide.lt-md>
       <div fxLayout="row">
         <mat-icon class="icon-user-menu">person</mat-icon>
-        <button mat-icon-button [matMenuTriggerFor]="menu">
-          <mat-icon>{{'expand_more'}}</mat-icon>
+        <button mat-icon-button [matMenuTriggerFor]="menu" (click)="userMenuOpened = true">
+          <mat-icon>{{userMenuOpened ? 'expand_more' : 'expand_less'}}</mat-icon>
         </button>
-        <mat-menu #menu="matMenu" [class]="'bg-menu'">
+        <mat-menu #menu="matMenu" [class]="'bg-menu'" (closed)="userMenuOpened = false">
           <a mat-menu-item routerLink="/finance/personal-data" class="white-color">Mis Datos</a>
           <a mat-menu-item (click)="logout()" class="white-color">Desconectar</a>
         </mat-menu>
@@ -72,10 +72,11 @@
       <div class="router-outlet-container">
         <router-outlet></router-outlet>
       </div>
+
+      <!--Footer-->
+      <app-footer></app-footer>
     </main>
 
-    <!--Footer-->
-    <app-footer></app-footer>
   </mat-sidenav-content>
 
 </mat-sidenav-container>
