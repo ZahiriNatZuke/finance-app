@@ -87,3 +87,30 @@ body {
   color: $green-pantone !important;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background-color: #232323;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #424242;
+  border-radius: 4px;
+  width: 1em;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #616161;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: #3b3b3b;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #232323;
+  border-radius: 4px;
+  width: 6px;
+}
+
