@@ -1,1 +1,49 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'assets/palette';
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.button-accept {
+  background-color: $forest-green-web;
+  color: $baby-powder;
+}
+
+.white-color {
+  color: $baby-powder;
+}
+
+.black-color {
+  color: $rich-black-fogra-39;
+}
+
+.bg-menu {
+  background: #232323
+}
+
+.px-20 {
+  padding: 0 20px !important;
+}
+
+.pb-20 {
+  padding-bottom: 20px !important;
+}
+
+.mt-40 {
+  margin-top: 40px !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+

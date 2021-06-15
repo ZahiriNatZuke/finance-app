@@ -1,0 +1,29 @@
+.footer {
+  background: #232323;
+  width: 100%;
+  position: sticky;
+  height: 174px;
+  padding: 1rem 0;
+
+  .icon-info {
+
+    .icon-footer {
+      width: 36px;
+      height: 36px;
+      font-size: 36px;
+    }
+
+    .spacer-v-footer {
+      width: 2px;
+      height: 48px;
+      margin: 0 10px;
+      background-color: gray;
+    }
+
+    .info {
+      width: 190px;
+      font-size: 14px;
+      margin: 0;
+    }
+  }
+}

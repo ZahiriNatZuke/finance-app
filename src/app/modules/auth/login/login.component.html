@@ -1,0 +1,40 @@
+<div class="login-container" fxLayout="column" fxLayoutAlign="center center">
+  <mat-card class="login">
+    <mat-card-header class="full-width pb-20" fxLayoutAlign="center center" fxLayout="row">
+      <app-brand-logo [bg]="'black'"></app-brand-logo>
+    </mat-card-header>
+
+    <form [formGroup]="loginForm" (ngSubmit)="LoginRequest()" novalidate>
+      <mat-card-content>
+        <mat-form-field class="full-width" appearance="outline">
+          <mat-icon matPrefix>person_outline</mat-icon>
+          <input matInput placeholder="Usuario" type="text" autocomplete="email" formControlName="user">
+          <mat-error *ngIf="loginForm.get('user')?.hasError('required')">
+            <span class="black-color">El usuario es requerido</span>
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="full-width" appearance="outline">
+          <mat-icon matPrefix class="cursor-pointer" (click)="$event.preventDefault();hidePwd = !hidePwd;"
+                    tabindex="-1">
+            {{hidePwd ? 'lock_open' : 'visibility'}}
+          </mat-icon>
+          <input matInput placeholder="Password" [type]="hidePwd ? 'password' : 'text'" autocomplete="current-password"
+                 formControlName="password" (keydown.enter)="$event.preventDefault()">
+          <mat-error *ngIf="loginForm.get('password')?.hasError('required')">
+            <span class="black-color">La contraseña es requerida</span>
+          </mat-error>
+          <mat-error *ngIf="loginForm.get('password')?.hasError('minlength')">
+            <span class="black-color">La contraseña debe tener al menos 8 caracteres</span>
+          </mat-error>
+        </mat-form-field>
+      </mat-card-content>
+
+      <mat-card-actions fxLayout="row" fxLayoutAlign="center center" class="px-20">
+        <button mat-raised-button class="full-width button-accept" [disabled]="loginForm.invalid" type="submit">
+          Entrar
+        </button>
+      </mat-card-actions>
+    </form>
+  </mat-card>
+</div>

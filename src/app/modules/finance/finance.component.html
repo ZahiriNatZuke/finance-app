@@ -1,0 +1,79 @@
+<mat-toolbar class="menu-container">
+  <mat-toolbar-row class="white-color" fxLayout="row" fxLayoutAlign="start center" fxLayoutAlign.gt-sm="end center">
+    <a routerLink="/finance/global-position" class="menu-logo" (mouseover)="bg = '#00C6A7'" (mouseleave)="bg = 'white'">
+      <app-brand-logo [bg]="bg"></app-brand-logo>
+    </a>
+
+    <div class="menu" fxShow="true" fxHide.lt-md>
+      <ul>
+        <li><a routerLink="/finance/global-position" routerLinkActive="active">Posición Global</a></li>
+        <li><a routerLink="/finance/investment-history" routerLinkActive="active">Histórico de Inversiones</a></li>
+      </ul>
+    </div>
+
+    <span class="menu-spacer"></span>
+
+    <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
+      <mat-icon>{{sidenav.opened ? 'close' : 'menu'}}</mat-icon>
+    </button>
+
+    <div class="user-menu" fxLayout="column" fxLayoutAlign="center center" fxShow="true" fxHide.lt-md>
+      <div fxLayout="row">
+        <mat-icon class="icon-user-menu">person</mat-icon>
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+          <mat-icon>{{'expand_more'}}</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu" [class]="'bg-menu'">
+          <a mat-menu-item routerLink="/finance/personal-data" class="white-color">Mis Datos</a>
+          <a mat-menu-item (click)="logout()" class="white-color">Desconectar</a>
+        </mat-menu>
+      </div>
+      <span class="user-info">Charles Martin</span>
+    </div>
+
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container>
+
+  <mat-sidenav #sidenav class="sidenav-container">
+    <div class="user-sidenav" fxLayout="column" fxLayoutAlign="center center">
+      <div fxLayout="row">
+        <mat-icon class="icon-user-sidenav">person</mat-icon>
+        <div fxLayout="column" fxLayoutAlign="center center">
+          <div class="full-width" fxLayout="row" fxLayoutAlign="end center">
+            <button mat-icon-button (click)="logout()">
+              <mat-icon>power_settings_new</mat-icon>
+            </button>
+          </div>
+          <span class="user-info-sidenav">Charles Martin</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="spacer-h"></div>
+
+    <mat-nav-list class="nav-list">
+      <a mat-menu-item routerLink="/finance/personal-data" routerLinkActive="active" (click)="sidenav.toggle()">
+        Mis Datos
+      </a>
+      <a mat-list-item routerLink="/finance/global-position" routerLinkActive="active" (click)="sidenav.toggle()">
+        Posición Global
+      </a>
+      <a mat-list-item routerLink="/finance/investment-history" routerLinkActive="active" (click)="sidenav.toggle()">
+        Histótico de Inversiones
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <!--Content-->
+    <main class="main-container">
+      <router-outlet></router-outlet>
+    </main>
+
+    <!--Footer-->
+    <app-footer></app-footer>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
