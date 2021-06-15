@@ -1,0 +1,229 @@
+@import 'src/assets/palette';
+
+.global-position-container {
+  padding: 2rem;
+
+  .title {
+    font-weight: bold;
+    font-size: 28px;
+  }
+
+  .date {
+    font-size: 16px;
+    padding-left: 30px;
+    font-weight: bold;
+    color: #575757;
+  }
+
+  .data {
+    min-width: 700px;
+    border: solid thin black;
+    border-radius: 4px;
+    padding: 20px 20px 30px 10px;
+
+    ul {
+      list-style: none;
+      padding-left: 30px;
+
+      li {
+        margin-bottom: 20px;
+      }
+
+    }
+
+    .text-data {
+      color: $green-pantone;
+      font-size: 32px;
+    }
+
+    .currency-data {
+      color: $green-pantone;
+      font-weight: bold;
+      font-size: 42px;
+
+      .annotation {
+        font-size: 18px;
+        color: gray;
+        position: relative;
+        top: -15px;
+      }
+
+    }
+
+  }
+
+  .info {
+    font-size: 14px;
+    color: gray;
+    padding-left: 30px;
+    margin: 0;
+  }
+
+  .panel {
+    width: 100%;
+    border: solid thin $forest-green-web;
+    border-radius: 4px;
+
+    .header-panel {
+      height: 72px;
+      padding: 10px;
+
+      .logo {
+        img {
+          width: 64px;
+          height: 64px;
+          aspect-ratio: auto 64/64;
+          border-radius: 100%;
+        }
+      }
+
+      .company-name {
+        margin-left: 15px;
+        font-size: 14px;
+        font-weight: bolder;
+        color: #575757;
+      }
+
+      .description {
+        width: 60%;
+
+        .info-description {
+          color: gray;
+          font-weight: bolder;
+        }
+
+        .currency-description {
+          color: $green-pantone;
+          font-weight: bolder;
+        }
+      }
+    }
+
+  }
+
+  .history-detail-container {
+    padding: 20px 10px 10px;
+
+    .history-detail {
+      padding-bottom: 10px;
+      color: gray;
+    }
+  }
+
+}
+
+.global-position-container-sm {
+
+  .header-sm {
+    background: $forest-green-web;
+    color: $baby-powder;
+    width: 100%;
+    padding: 10px 0 10px 10px;
+
+    .title {
+      font-size: 22px;
+      margin: 0;
+    }
+
+    .title-sm {
+      font-size: 24px;
+      margin: 0;
+    }
+  }
+
+  .data-sm {
+
+    .date {
+      font-size: 14px;
+      padding-left: 5px;
+      font-weight: bold;
+      color: #575757;
+      margin-top: 15px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0 0 0 5px;
+      margin: 10px 0 0;
+
+      li {
+        color: gray;
+        margin-bottom: 20px;
+
+        .text-data {
+          color: $green-pantone;
+          font-size: 14px;
+        }
+
+        .currency-data {
+          color: $green-pantone;
+          font-weight: bold;
+          font-size: 18px;
+          text-align: center;
+          margin-left: 33%;
+
+          .annotation {
+            font-size: 14px;
+            color: $rich-black-fogra-39;
+          }
+
+        }
+      }
+
+      li:last-child {
+        margin: 0;
+      }
+
+    }
+
+    p {
+      margin: 0;
+    }
+
+  }
+
+  .info {
+    font-size: 12px;
+    color: $rich-black-fogra-39;
+    padding: 10px;
+  }
+
+  .active-investment-detail-container {
+    list-style: none;
+    padding: 5px;
+    margin: 0;
+
+    .active-investment-detail {
+      padding: 5px;
+      border: solid thin $rich-black-fogra-39;
+      margin-bottom: 10px;
+
+      .badge-investment {
+        background: $forest-green-web;
+        padding: 1px 8px;
+        border-radius: 6px;
+        font-size: 11px;
+        color: $baby-powder;
+      }
+
+      .company-name {
+        margin-left: 15px;
+        font-size: 14px;
+        font-weight: bolder;
+        color: #575757;
+      }
+
+      .info-investment {
+        color: gray;
+      }
+
+    }
+  }
+}
+
+.filter-text {
+  color: $rich-black-fogra-39;
+  font-size: 16px;
+  position: relative;
+  top: -10px;
+}
