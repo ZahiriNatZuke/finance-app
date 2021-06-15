@@ -1,16 +1,18 @@
+@import 'src/assets/palette';
+
 .footer {
   background: #232323;
   width: 100%;
   position: sticky;
-  height: 174px;
+  height: 190px;
   padding: 1rem 0;
 
   .icon-info {
 
     .icon-footer {
-      width: 36px;
-      height: 36px;
-      font-size: 36px;
+      width: 32px;
+      height: 32px;
+      font-size: 32px;
     }
 
     .spacer-v-footer {
@@ -25,5 +27,18 @@
       font-size: 14px;
       margin: 0;
     }
+
+    .info-sm {
+      font-size: 12px;
+      margin: 0;
+    }
+  }
+
+  .legal-info {
+    width: 100%;
+    background: $baby-powder;
+    padding: 10px 5px;
+    font-size: 12px;
+    margin-top: 15px;
   }
 }

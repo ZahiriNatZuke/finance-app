@@ -16,19 +16,27 @@ body {
 
 .button-accept {
   background-color: $forest-green-web;
-  color: $baby-powder;
+  color: $baby-powder !important;
 }
 
 .white-color {
-  color: $baby-powder;
+  color: $baby-powder !important;
 }
 
 .black-color {
-  color: $rich-black-fogra-39;
+  color: $rich-black-fogra-39 !important;
+}
+
+.black-color-50 {
+  color: $rich-black-fogra-39 !important;
 }
 
 .bg-menu {
   background: #232323
+}
+
+.pl-10 {
+  padding-left: 10px !important;
 }
 
 .px-20 {
@@ -41,6 +49,10 @@ body {
 
 .mt-40 {
   margin-top: 40px !important;
+}
+
+.mx-5 {
+  margin: 0 5px !important;
 }
 
 .cursor-pointer {
