@@ -30,6 +30,13 @@
       "kind-op": "Tipo Operación",
       "profitability-obtained": "Rentabilidad Obtenida"
     },
+    "footer": {
+      "legal-warning": "Aviso Legal",
+      "privacy-policy": "Política de Privacidad",
+      "cookies-policy": "Política de Cookies",
+      "address": "Calle Ciudad Real 1A, 28223, Pozuelo de Alcorcón, Madrid.",
+      "address-partial": " C/ Ciudad Real 1"
+    },
     "global-position": {
       "info": "(1) Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cumque debitis dolore doloremque, esse eum molestiae odit omnis porro sed!",
       "capital-investment": "Total capital en inversiones activas:",

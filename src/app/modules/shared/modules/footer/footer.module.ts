@@ -4,6 +4,7 @@ import { FooterComponent } from './footer.component';
 import {BrandLogoModule} from '../brand-logo/brand-logo.module';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatIconModule} from '@angular/material/icon';
+import {TranslateModule} from '@ngx-translate/core';
 
 
 
@@ -14,11 +15,12 @@ import {MatIconModule} from '@angular/material/icon';
   exports: [
     FooterComponent
   ],
-  imports: [
-    CommonModule,
-    BrandLogoModule,
-    FlexLayoutModule,
-    MatIconModule
-  ]
+    imports: [
+        CommonModule,
+        BrandLogoModule,
+        FlexLayoutModule,
+        MatIconModule,
+        TranslateModule
+    ]
 })
 export class FooterModule { }

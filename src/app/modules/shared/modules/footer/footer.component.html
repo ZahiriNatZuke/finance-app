@@ -12,11 +12,11 @@
       <div class="spacer-v-footer" fxShow="true" fxHide.lt-md></div>
       <div class="spacer-v-footer" fxShow="true" fxHide.gt-sm [style.height.px]="80"></div>
       <span class="info" fxShow="true" fxHide.lt-md>
-            Calle Ciudad Real 1A, 28223, Pozuelo de Alcorcón, Madrid.
+           {{'finance.footer.address' | translate}}
       </span>
       <span class="info-sm" fxShow="true" fxHide.gt-sm>
         <b>Madrid</b><br>
-        C/ Ciudad Real 1 <br>
+        {{'finance.footer.address-partial' | translate}} <br>
         28223 Pozuelo de Alcorcón (Madrid) <br>
         +34 911 548 520
       </span>
@@ -40,9 +40,9 @@
       <mat-icon class="icon-footer">info</mat-icon>
       <div class="spacer-v-footer"></div>
       <span class="info">
-            Aviso Legal <br>
-            Política de Privacidad <br>
-            Política de Cookies
+            {{'finance.footer.legal-warning' | translate}} <br>
+            {{'finance.footer.privacy-policy' | translate}} <br>
+            {{'finance.footer.cookies-policy' | translate}}
       </span>
     </div>
 
@@ -51,11 +51,11 @@
   <div fxLayout="column" fxLayoutAlign="center center" class="legal-info" fxShow="true" fxHide.gt-sm
         fxLayoutGap="4px">
     <div fxLayout="row" fxLayoutAlign="center center" class="black-color">
-      <a href="#" target="_blank" class="black-color-50">Aviso Legal</a>
+      <a href="#" target="_blank" class="black-color-50">{{'finance.footer.legal-warning' | translate}}</a>
       <span class="mx-5">-</span>
-      <a href="#" target="_blank" class="black-color-50">Política de Privacidad</a>
+      <a href="#" target="_blank" class="black-color-50">{{'finance.footer.privacy-policy' | translate}}</a>
       <span class="mx-5">-</span>
-      <a href="#" target="_blank" class="black-color-50">Política de Cookies</a>
+      <a href="#" target="_blank" class="black-color-50">{{'finance.footer.cookies-policy' | translate}}</a>
     </div>
     <span class="black-color-50">&copy; Nexum Finanzas S.L</span>
   </div>
