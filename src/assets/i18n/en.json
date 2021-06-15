@@ -1,0 +1,27 @@
+{
+  "auth": {
+    "login": {
+      "user": "User",
+      "password": "Password",
+      "error": {
+        "required": {
+          "user": "User is required",
+          "password": "Password is required"
+        },
+        "minlength": {
+          "password": "The password must be at least 8 characters long"
+        }
+      },
+      "submit": "Login",
+      "info": "If you do not remember your access codes, contact us on the phone 911 548 520"
+    }
+  },
+  "finance": {
+    "global-position": {
+    },
+    "investment-history": {
+    },
+    "personal-data": {
+    }
+  }
+}

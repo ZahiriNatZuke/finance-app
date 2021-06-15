@@ -1,0 +1,27 @@
+{
+  "auth": {
+    "login": {
+      "user": "Usuario",
+      "password": "Contraseña",
+      "error": {
+        "required": {
+          "user": "El usuario es requerido",
+          "password": "La contraseña es requerida"
+        },
+        "minlength": {
+          "password": "La contraseña debe tener al menos 8 caracteres"
+        }
+      },
+      "submit": "Entrar",
+      "info": "Si no recuerdas tus claves de acceso ponte en contacto con nosotros en el teléfono 911 548 520"
+    }
+  },
+  "finance": {
+    "global-position": {
+    },
+    "investment-history": {
+    },
+    "personal-data": {
+    }
+  }
+}

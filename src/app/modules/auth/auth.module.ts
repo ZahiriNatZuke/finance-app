@@ -14,6 +14,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {ReactiveFormsModule} from '@angular/forms';
 import {AuthService} from './auth.service';
 import {BrandLogoModule} from '../shared/modules/brand-logo/brand-logo.module';
+import {TranslateModule} from '@ngx-translate/core';
 
 
 @NgModule({
@@ -21,19 +22,20 @@ import {BrandLogoModule} from '../shared/modules/brand-logo/brand-logo.module';
     AuthComponent,
     LoginComponent
   ],
-  imports: [
-    CommonModule,
-    AuthRoutingModule,
-    FlexLayoutModule,
-    MatCardModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatButtonModule,
-    MatIconModule,
-    HttpClientModule,
-    ReactiveFormsModule,
-    BrandLogoModule
-  ],
+    imports: [
+        CommonModule,
+        AuthRoutingModule,
+        FlexLayoutModule,
+        MatCardModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatButtonModule,
+        MatIconModule,
+        HttpClientModule,
+        ReactiveFormsModule,
+        BrandLogoModule,
+        TranslateModule
+    ],
   providers: [AuthService]
 })
 export class AuthModule {
