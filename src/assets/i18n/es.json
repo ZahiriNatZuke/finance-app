@@ -1,74 +1,74 @@
 {
-  "auth": {
-    "login": {
-      "user": "Usuario",
-      "password": "Contraseña",
-      "error": {
-        "required": {
-          "user": "El usuario es requerido",
-          "password": "La contraseña es requerida"
-        },
-        "minlength": {
-          "password": "La contraseña debe tener al menos 8 caracteres"
-        }
-      },
-      "submit": "Entrar",
-      "info": "Si no recuerdas tus claves de acceso ponte en contacto con nosotros en el teléfono 911 548 520"
-    }
-  },
-  "finance": {
-    "nav": {
-      "global-position": "Posición Global",
-      "investment-history": "Histórico de Inversiones",
-      "my-data": "Mis Datos",
-      "logout": "Desconectar"
-    },
-    "filter": {
-      "label": "Ordenar por:",
-      "start-date": "Fecha Entrada",
-      "end-date": "Fecha Salida",
-      "kind-op": "Tipo Operación",
-      "profitability-obtained": "Rentabilidad Obtenida"
-    },
-    "footer": {
-      "legal-warning": "Aviso Legal",
-      "privacy-policy": "Política de Privacidad",
-      "cookies-policy": "Política de Cookies",
-      "address": "Calle Ciudad Real 1A, 28223, Pozuelo de Alcorcón, Madrid.",
-      "address-partial": " C/ Ciudad Real 1"
-    },
-    "global-position": {
-      "info": "(1) Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cumque debitis dolore doloremque, esse eum molestiae odit omnis porro sed!",
-      "capital-investment": "Total capital en inversiones activas:",
-      "profit": "Intereses devengados periodo actual:",
-      "media-profit": "Rentabilidad media acumulada:",
-      "active-investment": "Inversiones activas",
-      "investment": "Inversión:",
-      "obj-profitability": "Rentabilidad Objetiva:",
-      "accrued-profit": "Int. devengados:",
-      "kind-op": "Tipo de Operación:",
-      "start-date": "F. entrada:",
-      "end-date": "F. vencimiento:",
-      "active-investment-detail": "Detalle Inversiones Activas",
-      "obj-profitability-resume": "Rent. Obj:",
-      "accrued-interest": "Intereses Devengados:",
-      "entry": "Entrada:",
-      "expiration": "Vencimiento:"
-    },
-    "investment-history": {
-      "title": "Resumen Inversiones cerradas",
-      "generated-interest": "Interés generado:",
-      "media-profitability": "Rentabilidad media:",
-      "info": "(1) Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cumque debitis dolore doloremque, esse eum molestiae odit omnis porro sed!",
-      "header-detail": "Histórico Inversiones cerradas",
-      "investment": "Inversión:",
-      "obj-profitability-resume": "Rent. Obj:",
-      "accrued-interest": "Intereses Devengados:",
-      "entry": "Entrada:",
-      "expiration": "Vencimiento:"
-    },
-    "personal-data": {
-      "info": "Si deseas modificar tus datos personales ponte en contacto con nosotros en el teléfono 911 548 520."
-    }
-  }
+	"auth": {
+		"login": {
+			"error": {
+				"minlength": {
+					"password": "La contraseña debe tener al menos 8 caracteres"
+				},
+				"required": {
+					"password": "La contraseña es requerida",
+					"user": "El usuario es requerido"
+				}
+			},
+			"info": "Si no recuerdas tus claves de acceso ponte en contacto con nosotros en el teléfono 911 548 520",
+			"password": "Contraseña",
+			"submit": "Entrar",
+			"user": "Usuario"
+		}
+	},
+	"finance": {
+		"filter": {
+			"end-date": "Fecha Salida",
+			"kind-op": "Tipo Operación",
+			"label": "Ordenar por:",
+			"profitability-obtained": "Rentabilidad Obtenida",
+			"start-date": "Fecha Entrada"
+		},
+		"footer": {
+			"address": "Calle Ciudad Real 1A, 28223, Pozuelo de Alcorcón, Madrid.",
+			"address-partial": " C/ Ciudad Real 1",
+			"cookies-policy": "Política de Cookies",
+			"legal-warning": "Aviso Legal",
+			"privacy-policy": "Política de Privacidad"
+		},
+		"global-position": {
+			"accrued-interest": "Intereses Devengados:",
+			"accrued-profit": "Int. devengados:",
+			"active-investment": "Inversiones activas",
+			"active-investment-detail": "Detalle Inversiones Activas",
+			"capital-investment": "Total capital en inversiones activas:",
+			"end-date": "F. vencimiento:",
+			"entry": "Entrada:",
+			"expiration": "Vencimiento:",
+			"info": "(1) Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cumque debitis dolore doloremque, esse eum molestiae odit omnis porro sed!",
+			"investment": "Inversión:",
+			"kind-op": "Tipo de Operación:",
+			"media-profit": "Rentabilidad media acumulada:",
+			"obj-profitability": "Rentabilidad Objetiva:",
+			"obj-profitability-resume": "Rent. Obj:",
+			"profit": "Intereses devengados periodo actual:",
+			"start-date": "F. entrada:"
+		},
+		"investment-history": {
+			"accrued-interest": "Intereses Devengados:",
+			"entry": "Entrada:",
+			"expiration": "Vencimiento:",
+			"generated-interest": "Interés generado:",
+			"header-detail": "Histórico Inversiones cerradas",
+			"info": "(1) Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cumque debitis dolore doloremque, esse eum molestiae odit omnis porro sed!",
+			"investment": "Inversión:",
+			"media-profitability": "Rentabilidad media:",
+			"obj-profitability-resume": "Rent. Obj:",
+			"title": "Resumen Inversiones cerradas"
+		},
+		"nav": {
+			"global-position": "Posición Global",
+			"investment-history": "Histórico de Inversiones",
+			"logout": "Desconectar",
+			"my-data": "Mis Datos"
+		},
+		"personal-data": {
+			"info": "Si deseas modificar tus datos personales ponte en contacto con nosotros en el teléfono 911 548 520."
+		}
+	}
 }
