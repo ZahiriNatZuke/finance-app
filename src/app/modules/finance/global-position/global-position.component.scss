@@ -2,6 +2,8 @@
 
 .global-position-container {
   padding: 2rem;
+  height: 100%;
+  min-height: calc(100vh - 326px);
 
   .title {
     font-weight: bold;

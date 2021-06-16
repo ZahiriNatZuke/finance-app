@@ -1,4 +1,6 @@
-<div fxLayout="column" fxLayoutGap="30px" ngClass.gt-sm="global-position-container"
+<app-loader *ngIf="showLoader"></app-loader>
+
+<div *ngIf="!showLoader" fxLayout="column" fxLayoutGap="30px" ngClass.gt-sm="global-position-container"
      fxFill ngClass.lt-md="global-position-container-sm" fxLayoutAlign="start center">
 
   <div>
@@ -10,7 +12,7 @@
 
     <div ngClass.lt-md="data-sm" ngClass.gt-sm="data mat-elevation-z4">
       <p class="date">
-        {{'Tue Jun 15 2021 12:01:00 GMT-0400' | date:'longDate'}}
+        {{data?.position_global?.date | date:'longDate'}}
       </p>
 
       <ul>
@@ -20,7 +22,7 @@
             {{'finance.global-position.capital-investment' | translate}}
           </p>
           <p class="currency-data">
-            {{ 275000 | currency}}
+            {{ data?.position_global?.capital_investment | currency}}
             <span class="annotation">(1)</span>
           </p>
         </li>
@@ -30,7 +32,7 @@
             {{'finance.global-position.profit' | translate}}
           </p>
           <p class="currency-data">
-            {{ 275000 | currency}}
+            {{ data?.position_global?.profit | currency}}
             <span class="annotation">(1)</span>
           </p>
         </li>
@@ -40,7 +42,7 @@
             {{'finance.global-position.media-profit' | translate}}
           </p>
           <p class="currency-data">
-            {{ 0.1113 | percent:'.0-2'}}
+            {{ data?.position_global?.media_profit | percent:'.0-2'}}
             <span class="annotation">(1)</span>
           </p>
         </li>
@@ -61,13 +63,13 @@
       </h1>
     </div>
 
-    <mat-expansion-panel class="panel">
+    <mat-expansion-panel class="panel" *ngFor="let investment of data?.active_investments">
       <mat-expansion-panel-header class="header-panel" fxLayout="row" fxLayoutAlign="start center">
         <mat-panel-title fxLayout="row" fxLayoutAlign="start center">
           <div class="logo">
-            <img src="assets/img/logo-company.png" alt="logo-company">
+            <img src="{{investment.logo}}" alt="logo-company">
           </div>
-          <span class="company-name">Europa Avenida (MTC)</span>
+          <span class="company-name">{{investment.company_name}}</span>
         </mat-panel-title>
 
         <mat-panel-description class="description" fxLayout="row" fxLayoutAlign="space-around center">
@@ -75,215 +77,37 @@
             <span class="info-description">
               {{'finance.global-position.investment' | translate}}
             </span>
-            <span class="currency-description">{{ 100000 | currency}}</span>
+            <span class="currency-description">{{ investment.investment | currency}}</span>
           </div>
           <div fxLayout="column" fxLayoutAlign="center center">
             <span class="info-description">
               {{'finance.global-position.obj-profitability' | translate}}
             </span>
-            <span class="currency-description">{{ 0.09 | percent:'.0-2'}}</span>
+            <span class="currency-description">{{ investment.obj_profitability | percent:'.0-2'}}</span>
           </div>
           <div fxLayout="column" fxLayoutAlign="center center">
             <span class="info-description">
               {{'finance.global-position.accrued-profit' | translate}}
             </span>
-            <span class="currency-description">{{ 10546 | currency}}</span>
+            <span class="currency-description">{{ investment.accrued_profit | currency}}</span>
           </div>
         </mat-panel-description>
       </mat-expansion-panel-header>
 
       <div class="history-detail-container">
         <ul class="history-detail">
-          <li fxLayout="row" fxLayoutAlign="space-between center">
+          <li fxLayout="row" fxLayoutAlign="space-between center" *ngFor="let record of investment.history_detail">
             <span>
-              <b>{{'finance.global-position.kind-op' | translate}}</b> Prestamo con Garantía Hipotecaría
+              <b>{{'finance.global-position.kind-op' | translate}}</b> {{record.kind_operation}}
             </span>
             <div fxLayout="row" fxLayoutAlign="space-around center" class="width-50">
               <span>
-                <b>{{'finance.global-position.start-date' | translate}}</b> {{'Tue Jun 15 2021 12:01:00 GMT-0400' | date:'M/d/yyyy'}}
+                <b>{{'finance.global-position.start-date' | translate}}</b>
+                {{record.start_date | date:'M/d/yyyy'}}
               </span>
               <span>
-                <b>{{'finance.global-position.end-date' | translate}}</b> {{'Tue Jun 15 2021 12:01:00 GMT-0400' | date:'M/d/yyyy'}}
-              </span>
-            </div>
-          </li>
-          <li fxLayout="row" fxLayoutAlign="space-between center">
-            <span>
-              <b>{{'finance.global-position.kind-op' | translate}}</b> Prestamo con Garantía Hipotecaría
-            </span>
-            <div fxLayout="row" fxLayoutAlign="space-around center" class="width-50">
-              <span>
-                <b>{{'finance.global-position.start-date' | translate}}</b> {{'Tue Jun 15 2021 12:01:00 GMT-0400' | date:'M/d/yyyy'}}
-              </span>
-              <span>
-                <b>{{'finance.global-position.end-date' | translate}}</b> {{'Tue Jun 15 2021 12:01:00 GMT-0400' | date:'M/d/yyyy'}}
-              </span>
-            </div>
-          </li>
-          <li fxLayout="row" fxLayoutAlign="space-between center">
-            <span>
-              <b>{{'finance.global-position.kind-op' | translate}}</b> Prestamo con Garantía Hipotecaría
-            </span>
-            <div fxLayout="row" fxLayoutAlign="space-around center" class="width-50">
-              <span>
-                <b>{{'finance.global-position.start-date' | translate}}</b> {{'Tue Jun 15 2021 12:01:00 GMT-0400' | date:'M/d/yyyy'}}
-              </span>
-              <span>
-                <b>{{'finance.global-position.end-date' | translate}}</b> {{'Tue Jun 15 2021 12:01:00 GMT-0400' | date:'M/d/yyyy'}}
-              </span>
-            </div>
-          </li>
-        </ul>
-      </div>
-
-    </mat-expansion-panel>
-
-    <mat-expansion-panel class="panel">
-      <mat-expansion-panel-header class="header-panel" fxLayout="row" fxLayoutAlign="start center">
-        <mat-panel-title fxLayout="row" fxLayoutAlign="start center">
-          <div class="logo">
-            <img src="assets/img/logo-company.png" alt="logo-company">
-          </div>
-          <span class="company-name">Europa Avenida (MTC)</span>
-        </mat-panel-title>
-
-        <mat-panel-description class="description" fxLayout="row" fxLayoutAlign="space-around center">
-          <div fxLayout="column" fxLayoutAlign="center center">
-            <span class="info-description">
-              {{'finance.global-position.investment' | translate}}
-            </span>
-            <span class="currency-description">{{ 100000 | currency}}</span>
-          </div>
-          <div fxLayout="column" fxLayoutAlign="center center">
-            <span class="info-description">
-              {{'finance.global-position.obj-profitability' | translate}}
-            </span>
-            <span class="currency-description">{{ 0.09 | percent:'.0-2'}}</span>
-          </div>
-          <div fxLayout="column" fxLayoutAlign="center center">
-            <span class="info-description">
-              {{'finance.global-position.accrued-profit' | translate}}
-            </span>
-            <span class="currency-description">{{ 10546 | currency}}</span>
-          </div>
-        </mat-panel-description>
-      </mat-expansion-panel-header>
-
-      <div class="history-detail-container">
-        <ul class="history-detail">
-          <li fxLayout="row" fxLayoutAlign="space-between center">
-            <span>
-              <b>{{'finance.global-position.kind-op' | translate}}</b> Prestamo con Garantía Hipotecaría
-            </span>
-            <div fxLayout="row" fxLayoutAlign="space-around center" class="width-50">
-              <span>
-                <b>{{'finance.global-position.start-date' | translate}}</b> {{'Tue Jun 15 2021 12:01:00 GMT-0400' | date:'M/d/yyyy'}}
-              </span>
-              <span>
-                <b>{{'finance.global-position.end-date' | translate}}</b> {{'Tue Jun 15 2021 12:01:00 GMT-0400' | date:'M/d/yyyy'}}
-              </span>
-            </div>
-          </li>
-          <li fxLayout="row" fxLayoutAlign="space-between center">
-            <span>
-              <b>{{'finance.global-position.kind-op' | translate}}</b> Prestamo con Garantía Hipotecaría
-            </span>
-            <div fxLayout="row" fxLayoutAlign="space-around center" class="width-50">
-              <span>
-                <b>{{'finance.global-position.start-date' | translate}}</b> {{'Tue Jun 15 2021 12:01:00 GMT-0400' | date:'M/d/yyyy'}}
-              </span>
-              <span>
-                <b>{{'finance.global-position.end-date' | translate}}</b> {{'Tue Jun 15 2021 12:01:00 GMT-0400' | date:'M/d/yyyy'}}
-              </span>
-            </div>
-          </li>
-          <li fxLayout="row" fxLayoutAlign="space-between center">
-            <span>
-              <b>{{'finance.global-position.kind-op' | translate}}</b> Prestamo con Garantía Hipotecaría
-            </span>
-            <div fxLayout="row" fxLayoutAlign="space-around center" class="width-50">
-              <span>
-                <b>{{'finance.global-position.start-date' | translate}}</b> {{'Tue Jun 15 2021 12:01:00 GMT-0400' | date:'M/d/yyyy'}}
-              </span>
-              <span>
-                <b>{{'finance.global-position.end-date' | translate}}</b> {{'Tue Jun 15 2021 12:01:00 GMT-0400' | date:'M/d/yyyy'}}
-              </span>
-            </div>
-          </li>
-        </ul>
-      </div>
-
-    </mat-expansion-panel>
-
-    <mat-expansion-panel class="panel">
-      <mat-expansion-panel-header class="header-panel" fxLayout="row" fxLayoutAlign="start center">
-        <mat-panel-title fxLayout="row" fxLayoutAlign="start center">
-          <div class="logo">
-            <img src="assets/img/logo-company.png" alt="logo-company">
-          </div>
-          <span class="company-name">Europa Avenida (MTC)</span>
-        </mat-panel-title>
-
-        <mat-panel-description class="description" fxLayout="row" fxLayoutAlign="space-around center">
-          <div fxLayout="column" fxLayoutAlign="center center">
-            <span class="info-description">
-              {{'finance.global-position.investment' | translate}}
-            </span>
-            <span class="currency-description">{{ 100000 | currency}}</span>
-          </div>
-          <div fxLayout="column" fxLayoutAlign="center center">
-            <span class="info-description">
-              {{'finance.global-position.obj-profitability' | translate}}
-            </span>
-            <span class="currency-description">{{ 0.09 | percent:'.0-2'}}</span>
-          </div>
-          <div fxLayout="column" fxLayoutAlign="center center">
-            <span class="info-description">
-              {{'finance.global-position.accrued-profit' | translate}}
-            </span>
-            <span class="currency-description">{{ 10546 | currency}}</span>
-          </div>
-        </mat-panel-description>
-      </mat-expansion-panel-header>
-
-      <div class="history-detail-container">
-        <ul class="history-detail">
-          <li fxLayout="row" fxLayoutAlign="space-between center">
-            <span>
-              <b>{{'finance.global-position.kind-op' | translate}}</b> Prestamo con Garantía Hipotecaría
-            </span>
-            <div fxLayout="row" fxLayoutAlign="space-around center" class="width-50">
-              <span>
-                <b>{{'finance.global-position.start-date' | translate}}</b> {{'Tue Jun 15 2021 12:01:00 GMT-0400' | date:'M/d/yyyy'}}
-              </span>
-              <span>
-                <b>{{'finance.global-position.end-date' | translate}}</b> {{'Tue Jun 15 2021 12:01:00 GMT-0400' | date:'M/d/yyyy'}}
-              </span>
-            </div>
-          </li>
-          <li fxLayout="row" fxLayoutAlign="space-between center">
-            <span>
-              <b>{{'finance.global-position.kind-op' | translate}}</b> Prestamo con Garantía Hipotecaría
-            </span>
-            <div fxLayout="row" fxLayoutAlign="space-around center" class="width-50">
-              <span>
-                <b>{{'finance.global-position.start-date' | translate}}</b> {{'Tue Jun 15 2021 12:01:00 GMT-0400' | date:'M/d/yyyy'}}
-              </span>
-              <span>
-                <b>{{'finance.global-position.end-date' | translate}}</b> {{'Tue Jun 15 2021 12:01:00 GMT-0400' | date:'M/d/yyyy'}}
-              </span>
-            </div>
-          </li>
-          <li fxLayout="row" fxLayoutAlign="space-between center">
-            <span>
-              <b>{{'finance.global-position.kind-op' | translate}}</b> Prestamo con Garantía Hipotecaría
-            </span>
-            <div fxLayout="row" fxLayoutAlign="space-around center" class="width-50">
-              <span>
-                <b>{{'finance.global-position.start-date' | translate}}</b> {{'Tue Jun 15 2021 12:01:00 GMT-0400' | date:'M/d/yyyy'}}
-              </span>
-              <span>
-                <b>{{'finance.global-position.end-date' | translate}}</b> {{'Tue Jun 15 2021 12:01:00 GMT-0400' | date:'M/d/yyyy'}}
+                <b>{{'finance.global-position.end-date' | translate}}</b>
+                {{record.end_date | date:'M/d/yyyy'}}
               </span>
             </div>
           </li>
@@ -300,7 +124,7 @@
       </h1>
     </div>
 
-    <div fxLayout="row" fxLayoutAlign="center center" class="full-width">
+    <div fxLayout="row" fxLayoutAlign="center center" class="full-width mt-10">
       <span class="filter-text">
         {{'finance.filter.label' | translate}}
       </span>
@@ -323,78 +147,29 @@
     </div>
 
     <ul class="active-investment-detail-container">
-      <li class="active-investment-detail" fxLayout="column" fxLayoutAlign="center start">
+      <li class="active-investment-detail" fxLayout="column" fxLayoutAlign="center start"
+          *ngFor="let investment of data?.active_investments">
         <div fxLayout="row" fxLayoutAlign="start center" class="pb-10">
           <span class="badge-investment">PGH</span>
-          <span class="company-name">Europa Avenida (MTC)</span>
+          <span class="company-name">{{investment.company_name}}</span>
         </div>
         <div fxLayout="row" fxLayoutAlign="space-between center" class="full-width pb-10">
           <span class="info-investment">{{'finance.global-position.investment' | translate}}&nbsp;
-            <b class="text-primary">{{100000 | currency}}</b>
+            <b class="text-primary">{{investment.investment | currency}}</b>
           </span>
           <span class="info-investment">{{'finance.global-position.obj-profitability-resume' | translate}}&nbsp;
-            <b class="text-primary">{{0.09 | percent:'.0-2'}}</b>
+            <b class="text-primary">{{investment.obj_profitability | percent:'.0-2'}}</b>
           </span>
         </div>
         <span class="info-investment pb-10">{{'finance.global-position.accrued-interest' | translate}}&nbsp;
-          <b class="text-primary">{{10546 | currency}}</b>
+          <b class="text-primary">{{investment.accrued_profit | currency}}</b>
         </span>
         <div fxLayout="row" fxLayoutAlign="space-between center" class="full-width pb-10">
           <span class="info-investment">{{'finance.global-position.entry' | translate}}&nbsp;
-            {{'Tue Jun 15 2021 12:01:00 GMT-0400' | date:'M/d/yyyy'}}
+            {{investment.start_date | date:'M/d/yyyy'}}
           </span>
           <span class="info-investment">{{'finance.global-position.expiration' | translate}}&nbsp;
-            {{'Tue Jun 15 2021 12:01:00 GMT-0400' | date:'M/d/yyyy'}}
-          </span>
-        </div>
-      </li>
-      <li class="active-investment-detail" fxLayout="column" fxLayoutAlign="center start">
-        <div fxLayout="row" fxLayoutAlign="start center" class="pb-10">
-          <span class="badge-investment">PGH</span>
-          <span class="company-name">Europa Avenida (MTC)</span>
-        </div>
-        <div fxLayout="row" fxLayoutAlign="space-between center" class="full-width pb-10">
-          <span class="info-investment">{{'finance.global-position.investment' | translate}}&nbsp;
-            <b class="text-primary">{{100000 | currency}}</b>
-          </span>
-          <span class="info-investment">{{'finance.global-position.obj-profitability-resume' | translate}}&nbsp;
-            <b class="text-primary">{{0.09 | percent:'.0-2'}}</b>
-          </span>
-        </div>
-        <span class="info-investment pb-10">{{'finance.global-position.accrued-interest' | translate}}&nbsp;
-          <b class="text-primary">{{10546 | currency}}</b>
-        </span>
-        <div fxLayout="row" fxLayoutAlign="space-between center" class="full-width pb-10">
-          <span class="info-investment">{{'finance.global-position.entry' | translate}}&nbsp;
-            {{'Tue Jun 15 2021 12:01:00 GMT-0400' | date:'M/d/yyyy'}}
-          </span>
-          <span class="info-investment">{{'finance.global-position.expiration' | translate}}&nbsp;
-            {{'Tue Jun 15 2021 12:01:00 GMT-0400' | date:'M/d/yyyy'}}
-          </span>
-        </div>
-      </li>
-      <li class="active-investment-detail" fxLayout="column" fxLayoutAlign="center start">
-        <div fxLayout="row" fxLayoutAlign="start center" class="pb-10">
-          <span class="badge-investment">PGH</span>
-          <span class="company-name">Europa Avenida (MTC)</span>
-        </div>
-        <div fxLayout="row" fxLayoutAlign="space-between center" class="full-width pb-10">
-          <span class="info-investment">{{'finance.global-position.investment' | translate}}&nbsp;
-            <b class="text-primary">{{100000 | currency}}</b>
-          </span>
-          <span class="info-investment">{{'finance.global-position.obj-profitability-resume' | translate}}&nbsp;
-            <b class="text-primary">{{0.09 | percent:'.0-2'}}</b>
-          </span>
-        </div>
-        <span class="info-investment pb-10">{{'finance.global-position.accrued-interest' | translate}}&nbsp;
-          <b class="text-primary">{{10546 | currency}}</b>
-        </span>
-        <div fxLayout="row" fxLayoutAlign="space-between center" class="full-width pb-10">
-          <span class="info-investment">{{'finance.global-position.entry' | translate}}&nbsp;
-            {{'Tue Jun 15 2021 12:01:00 GMT-0400' | date:'M/d/yyyy'}}
-          </span>
-          <span class="info-investment">{{'finance.global-position.expiration' | translate}}&nbsp;
-            {{'Tue Jun 15 2021 12:01:00 GMT-0400' | date:'M/d/yyyy'}}
+            {{investment.end_date | date:'M/d/yyyy'}}
           </span>
         </div>
       </li>

@@ -1,0 +1,57 @@
+{
+  "position_global": {
+    "date": "Tue Jun 15 2021 12:01:00 GMT-0400",
+    "capital_investment": 275000,
+    "profit": 275000,
+    "media_profit": 0.1113
+  },
+  "active_investments": [
+    {
+      "logo": "assets/img/logo-company.png",
+      "company_name": "Europa Avenida (MTC)",
+      "investment": 100000,
+      "obj_profitability": 0.09,
+      "accrued_profit": 10546,
+      "start_date": "Tue Jun 15 2021 12:01:00 GMT-0400",
+      "end_date": "Tue Jun 15 2021 12:01:00 GMT-0400",
+      "history_detail": [
+        {
+          "kind_operation": "Prestamo con Garantía Hipotecaría",
+          "start_date": "Tue Jun 15 2021 12:01:00 GMT-0400",
+          "end_date": "Tue Jun 15 2021 12:01:00 GMT-0400"
+        },
+        {
+          "kind_operation": "Prestamo con Garantía Hipotecaría",
+          "start_date": "Tue Jun 15 2021 12:01:00 GMT-0400",
+          "end_date": "Tue Jun 15 2021 12:01:00 GMT-0400"
+        }
+      ]
+    },
+    {
+      "logo": "assets/img/logo-company.png",
+      "company_name": "Europa Avenida (MTC)",
+      "investment": 100000,
+      "obj_profitability": 0.09,
+      "accrued_profit": 10546,
+      "start_date": "Tue Jun 15 2021 12:01:00 GMT-0400",
+      "end_date": "Tue Jun 15 2021 12:01:00 GMT-0400",
+      "history_detail": [
+        {
+          "kind_operation": "Prestamo con Garantía Hipotecaría",
+          "start_date": "Tue Jun 15 2021 12:01:00 GMT-0400",
+          "end_date": "Tue Jun 15 2021 12:01:00 GMT-0400"
+        },
+        {
+          "kind_operation": "Prestamo con Garantía Hipotecaría",
+          "start_date": "Tue Jun 15 2021 12:01:00 GMT-0400",
+          "end_date": "Tue Jun 15 2021 12:01:00 GMT-0400"
+        },
+        {
+          "kind_operation": "Prestamo con Garantía Hipotecaría",
+          "start_date": "Tue Jun 15 2021 12:01:00 GMT-0400",
+          "end_date": "Tue Jun 15 2021 12:01:00 GMT-0400"
+        }
+      ]
+    }
+  ]
+}

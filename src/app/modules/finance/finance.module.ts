@@ -19,20 +19,20 @@ import {TranslateModule} from '@ngx-translate/core';
   declarations: [
     FinanceComponent
   ],
-    imports: [
-        CommonModule,
-        FinanceRoutingModule,
-        MatIconModule,
-        MatToolbarModule,
-        BrandLogoModule,
-        FlexLayoutModule,
-        MatSidenavModule,
-        MatListModule,
-        MatButtonModule,
-        FooterModule,
-        MatMenuModule,
-        TranslateModule
-    ]
+  imports: [
+    CommonModule,
+    FinanceRoutingModule,
+    MatIconModule,
+    MatToolbarModule,
+    BrandLogoModule,
+    FlexLayoutModule,
+    MatSidenavModule,
+    MatListModule,
+    MatButtonModule,
+    FooterModule,
+    MatMenuModule,
+    TranslateModule
+  ]
 })
 export class FinanceModule {
 }
