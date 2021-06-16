@@ -24,6 +24,10 @@ export class ApiHelpers {
     return this.URL_API + '/assets/data/finance.investment-history.json';
   }
 
+  public getPersonalDataURL() {
+    return this.URL_API + '/assets/data/finance.personal-data.json';
+  }
+
   public getHeadersWithOutAuth(): HttpHeaders {
     return new HttpHeaders({
       Accept: 'application/json',

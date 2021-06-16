@@ -1,5 +1,8 @@
-<div fxLayout="column" fxLayoutAlign.gt-sm="center center" fxLayoutGap="30px" ngClass.gt-sm="personal-data-container"
-     ngClass.lt-md="personal-data-container-sm" fxLayoutAlign.lt-md="start center">
+<app-loader *ngIf="showLoader"></app-loader>
+
+<div *ngIf="!showLoader" fxLayout="column" fxLayoutAlign.gt-sm="center center" fxLayoutGap="30px"
+     ngClass.gt-sm="personal-data-container" ngClass.lt-md="personal-data-container-sm"
+     fxLayoutAlign.lt-md="start center">
 
   <div ngClass.gt-sm="header-md" ngClass.gt-lg="header-lg" ngClass.lt-md="header-sm" fxLayout="row"
        fxLayoutAlign="start center">
@@ -13,25 +16,25 @@
       <li fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="start end">
         <mat-icon class="icon-data">person</mat-icon>
         <div class="text-data">
-          <p>Carlos José Martín Pereira y Marta Gallardo Ruiz</p>
+          <p>{{data?.full_name}}</p>
         </div>
       </li>
       <li fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="start end">
         <mat-icon class="icon-data">alternate_email</mat-icon>
         <div class="text-data">
-          <p>cmartinpe@gmail.com</p>
+          <p>{{data?.email}}</p>
         </div>
       </li>
       <li fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="start end">
         <mat-icon class="icon-data">call</mat-icon>
         <div class="text-data">
-          <p>631106057</p>
+          <p>{{data?.phone_number}}</p>
         </div>
       </li>
       <li fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="start end">
         <mat-icon class="icon-data">house</mat-icon>
         <div class="text-data">
-          <p>Avda. Lazarejo, 300 - 28232 - Las Rojas de Madrid - España</p>
+          <p>{{data?.address}}</p>
         </div>
       </li>
     </ul>

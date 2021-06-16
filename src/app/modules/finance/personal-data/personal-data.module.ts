@@ -7,6 +7,7 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatListModule} from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
 import {TranslateModule} from '@ngx-translate/core';
+import {LoaderModule} from '../../shared/modules/loader/loader.module';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import {TranslateModule} from '@ngx-translate/core';
         FlexLayoutModule,
         MatListModule,
         MatIconModule,
-        TranslateModule
+        TranslateModule,
+        LoaderModule
     ]
 })
 export class PersonalDataModule { }
