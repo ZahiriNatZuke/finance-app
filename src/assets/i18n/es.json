@@ -51,15 +51,20 @@
 		},
 		"investment-history": {
 			"accrued-interest": "Intereses Devengados:",
+			"accrued-interest-resume": "Int. Devengados:",
+      "end-date": "F. vencimiento:",
 			"entry": "Entrada:",
 			"expiration": "Vencimiento:",
 			"generated-interest": "Interés generado:",
 			"header-detail": "Histórico Inversiones cerradas",
 			"info": "(1) Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cumque debitis dolore doloremque, esse eum molestiae odit omnis porro sed!",
 			"investment": "Inversión:",
-			"media-profitability": "Rentabilidad media:",
+      "kind-op": "Tipo de Operación:",
+      "media-profitability": "Rentabilidad Media:",
+			"obj-profitability": "Rentabilidad Objetiva:",
 			"obj-profitability-resume": "Rent. Obj:",
-			"title": "Resumen Inversiones cerradas"
+			"title": "Resumen Inversiones cerradas",
+      "start-date": "F. entrada:"
 		},
 		"nav": {
 			"global-position": "Posición Global",

@@ -45,20 +45,23 @@
 			"kind-op": "Type of Operation:",
 			"media-profit": "Average accumulated profitability:",
 			"obj-profitability": "Objective Profitability:",
-			"obj-profitability-resume": "Rent. Obj:",
+			"obj-profitability-resume": "Obj. Prof.:",
 			"profit": "Interest accrued current period:",
 			"start-date": "D. entry:"
 		},
 		"investment-history": {
 			"accrued-interest": "Accrued Interest:",
+			"accrued-interest-resume": "Accrued Int.:",
 			"entry": "Entry:",
 			"expiration": "Expiration:",
 			"generated-interest": "Interest generated:",
 			"header-detail": "Historical Closed Investments",
 			"info": "(1) Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cumque debitis dolore doloremque, esse eum molestiae odit omnis porro sed!",
 			"investment": "Investment:",
-			"media-profitability": "Average profitability:",
-			"obj-profitability-resume": "Rent. Obj:",
+      "kind-op": "Type of Operation:",
+      "media-profitability": "Average Profitability:",
+			"obj-profitability": "Objective Profitability:",
+			"obj-profitability-resume": "Obj. Prof.:",
 			"title": "Summary Closed investments"
 		},
 		"nav": {

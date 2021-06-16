@@ -1,5 +1,7 @@
-<div fxLayout="column" fxLayoutGap="30px" ngClass.gt-sm="global-position-container"
-     fxFill ngClass.lt-md="global-position-container-sm" fxLayoutAlign="start center">
+<app-loader *ngIf="showLoader"></app-loader>
+
+<div *ngIf="!showLoader" fxLayout="column" fxLayoutGap="30px" ngClass.gt-sm="global-position-container"
+     ngClass.lt-md="global-position-container-sm" fxLayoutAlign="start center">
 
   <div>
     <div ngClass.lt-md="header-sm" fxLayout="row" fxLayoutAlign="start center">
@@ -10,7 +12,7 @@
 
     <div ngClass.lt-md="data-sm" ngClass.gt-sm="data mat-elevation-z4">
       <p class="date">
-        {{'Tue Jun 15 2021 12:01:00 GMT-0400' | date:'longDate'}}
+        {{data?.resume_investment_history?.date | date:'longDate'}}
       </p>
 
       <ul>
@@ -20,7 +22,7 @@
             {{'finance.investment-history.generated-interest' | translate}}
           </p>
           <p class="currency-data">
-            {{ 275000 | currency}}
+            {{ data?.resume_investment_history?.accrued_interest | currency}}
             <span class="annotation">(1)</span>
           </p>
         </li>
@@ -30,7 +32,7 @@
             {{'finance.investment-history.media-profitability' | translate}}
           </p>
           <p class="currency-data">
-            {{ 0.1113 | percent:'.0-2'}}
+            {{ data?.resume_investment_history?.media_profitability | percent:'.0-2'}}
             <span class="annotation">(1)</span>
           </p>
         </li>
@@ -47,51 +49,53 @@
 
     <div ngClass.lt-md="header-sm" fxLayout="row" fxLayoutAlign="space-between center">
       <h1 ngClass.gt-sm="title text-primary" ngClass.lt-md="title white-color">
-        Histórico Inversiones cerradas
+        {{'finance.investment-history.header-detail' | translate}}
       </h1>
       <div fxLayout="row" fxLayoutAlign="end center" class="width-50">
-        <span class="filter-text text-bold">Ordenar por:</span>
+        <span class="filter-text">
+        {{'finance.filter.label' | translate}}
+      </span>
         <mat-form-field appearance="outline" class="pl-10">
           <mat-select>
             <mat-option value="Fecha Entrada">
-              Fecha Entrada
+              {{'finance.filter.start-date' | translate}}
             </mat-option>
             <mat-option value="Fecha Salida">
-              Fecha Salida
+              {{'finance.filter.end-date' | translate}}
             </mat-option>
             <mat-option value="Tipo Operación">
-              Tipo Operación
+              {{'finance.filter.kind-op' | translate}}
             </mat-option>
             <mat-option value="Rentabilidad Optenida">
-              Rentabilidad Optenida
+              {{'finance.filter.profitability-obtained' | translate}}
             </mat-option>
           </mat-select>
         </mat-form-field>
       </div>
     </div>
 
-    <div class="panel mat-elevation-z6">
+    <div class="panel mat-elevation-z6" *ngFor="let record of data?.closed_investment_history">
 
       <div class="header-panel full-width" fxLayout="row" fxLayoutAlign="space-between center">
         <div fxLayout="row" fxLayoutAlign="start center">
           <div class="logo">
-            <img src="assets/img/logo-company.png" alt="logo-company">
+            <img src="{{record.logo}}" alt="logo-company">
           </div>
-          <span class="company-name">Europa Avenida (MTC)</span>
+          <span class="company-name">{{record.company_name}}</span>
         </div>
 
         <div class="description" fxLayout="row" fxLayoutAlign="space-around center">
           <div fxLayout="column" fxLayoutAlign="center center">
-            <span class="info-description">Inversión:</span>
-            <span class="currency-description">{{ 100000 | currency}}</span>
+            <span class="info-description">{{'finance.investment-history.investment' | translate}}</span>
+            <span class="currency-description">{{ record.investment | currency}}</span>
           </div>
           <div fxLayout="column" fxLayoutAlign="center center">
-            <span class="info-description">Rentabilidad Objetiva:</span>
-            <span class="currency-description">{{ 0.09 | percent:'.0-2'}}</span>
+            <span class="info-description">{{'finance.investment-history.obj-profitability' | translate}}</span>
+            <span class="currency-description">{{ record.obj_profitability | percent:'.0-2'}}</span>
           </div>
           <div fxLayout="column" fxLayoutAlign="center center">
-            <span class="info-description">Int. devengados:</span>
-            <span class="currency-description">{{ 10546 | currency}}</span>
+            <span class="info-description">{{'finance.investment-history.accrued-interest-resume' | translate}}</span>
+            <span class="currency-description">{{ record.accrued_profit | currency}}</span>
           </div>
         </div>
       </div>
@@ -99,102 +103,16 @@
       <div class="history-detail-container">
         <div class="history-detail" fxLayout="row" fxLayoutAlign="space-between center">
         <span>
-          <b>Tipo de Operación:</b> Prestamo con Garantía Hipotecaría
+          <b>{{'finance.investment-history.kind-op' | translate}}</b> {{record.kind_operation}}
         </span>
           <div fxLayout="row" fxLayoutAlign="space-around center" class="width-50">
           <span>
-            <b>F. entrada:</b> {{'Tue Jun 15 2021 12:01:00 GMT-0400' | date:'M/d/yyyy'}}
+            <b>{{'finance.investment-history.start-date' | translate}}</b>
+            {{record.start_date | date:'M/d/yyyy'}}
           </span>
             <span>
-            <b>F. vencimiento:</b> {{'Tue Jun 15 2021 12:01:00 GMT-0400' | date:'M/d/yyyy'}}
-          </span>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="panel mat-elevation-z6">
-
-      <div class="header-panel full-width" fxLayout="row" fxLayoutAlign="space-between center">
-        <div fxLayout="row" fxLayoutAlign="start center">
-          <div class="logo">
-            <img src="assets/img/logo-company.png" alt="logo-company">
-          </div>
-          <span class="company-name">Europa Avenida (MTC)</span>
-        </div>
-
-        <div class="description" fxLayout="row" fxLayoutAlign="space-around center">
-          <div fxLayout="column" fxLayoutAlign="center center">
-            <span class="info-description">Inversión:</span>
-            <span class="currency-description">{{ 100000 | currency}}</span>
-          </div>
-          <div fxLayout="column" fxLayoutAlign="center center">
-            <span class="info-description">Rentabilidad Objetiva:</span>
-            <span class="currency-description">{{ 0.09 | percent:'.0-2'}}</span>
-          </div>
-          <div fxLayout="column" fxLayoutAlign="center center">
-            <span class="info-description">Int. devengados:</span>
-            <span class="currency-description">{{ 10546 | currency}}</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="history-detail-container">
-        <div class="history-detail" fxLayout="row" fxLayoutAlign="space-between center">
-        <span>
-          <b>Tipo de Operación:</b> Prestamo con Garantía Hipotecaría
-        </span>
-          <div fxLayout="row" fxLayoutAlign="space-around center" class="width-50">
-          <span>
-            <b>F. entrada:</b> {{'Tue Jun 15 2021 12:01:00 GMT-0400' | date:'M/d/yyyy'}}
-          </span>
-            <span>
-            <b>F. vencimiento:</b> {{'Tue Jun 15 2021 12:01:00 GMT-0400' | date:'M/d/yyyy'}}
-          </span>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="panel mat-elevation-z6">
-
-      <div class="header-panel full-width" fxLayout="row" fxLayoutAlign="space-between center">
-        <div fxLayout="row" fxLayoutAlign="start center">
-          <div class="logo">
-            <img src="assets/img/logo-company.png" alt="logo-company">
-          </div>
-          <span class="company-name">Europa Avenida (MTC)</span>
-        </div>
-
-        <div class="description" fxLayout="row" fxLayoutAlign="space-around center">
-          <div fxLayout="column" fxLayoutAlign="center center">
-            <span class="info-description">Inversión:</span>
-            <span class="currency-description">{{ 100000 | currency}}</span>
-          </div>
-          <div fxLayout="column" fxLayoutAlign="center center">
-            <span class="info-description">Rentabilidad Objetiva:</span>
-            <span class="currency-description">{{ 0.09 | percent:'.0-2'}}</span>
-          </div>
-          <div fxLayout="column" fxLayoutAlign="center center">
-            <span class="info-description">Int. devengados:</span>
-            <span class="currency-description">{{ 10546 | currency}}</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="history-detail-container">
-        <div class="history-detail" fxLayout="row" fxLayoutAlign="space-between center">
-        <span>
-          <b>Tipo de Operación:</b> Prestamo con Garantía Hipotecaría
-        </span>
-          <div fxLayout="row" fxLayoutAlign="space-around center" class="width-50">
-          <span>
-            <b>F. entrada:</b> {{'Tue Jun 15 2021 12:01:00 GMT-0400' | date:'M/d/yyyy'}}
-          </span>
-            <span>
-            <b>F. vencimiento:</b> {{'Tue Jun 15 2021 12:01:00 GMT-0400' | date:'M/d/yyyy'}}
+            <b>{{'finance.investment-history.end-date' | translate}}</b>
+              {{record.end_date | date:'M/d/yyyy'}}
           </span>
           </div>
         </div>
@@ -211,7 +129,7 @@
       </h1>
     </div>
 
-    <div fxLayout="row" fxLayoutAlign="center center" class="full-width">
+    <div fxLayout="row" fxLayoutAlign="center center" class="full-width mt-10">
       <span class="filter-text">
         {{'finance.filter.label' | translate}}
       </span>
@@ -234,93 +152,34 @@
     </div>
 
     <ul class="active-investment-detail-container">
-      <li class="active-investment-detail" fxLayout="column" fxLayoutAlign="center start">
+      <li class="active-investment-detail mat-elevation-z6" fxLayout="column" fxLayoutAlign="center start"
+          *ngFor="let record of data?.closed_investment_history">
         <div fxLayout="row" fxLayoutAlign="start center" class="pb-10">
           <span class="badge-investment">PGH</span>
-          <span class="company-name">Europa Avenida (MTC)</span>
+          <span class="company-name">{{record.company_name}}</span>
         </div>
         <div fxLayout="row" fxLayoutAlign="space-between center" class="full-width pb-10">
           <span class="info-investment">
             {{'finance.investment-history.investment' | translate}}&nbsp;
-            <b class="text-primary">{{100000 | currency}}</b>
+            <b class="text-primary">{{record.investment | currency}}</b>
           </span>
           <span class="info-investment">
             {{'finance.investment-history.obj-profitability-resume' | translate}}&nbsp;
-            <b class="text-primary">{{0.09 | percent:'.0-2'}}</b>
+            <b class="text-primary">{{record.obj_profitability | percent:'.0-2'}}</b>
           </span>
         </div>
         <span class="info-investment pb-10">
           {{'finance.investment-history.accrued-interest' | translate}}&nbsp;
-          <b class="text-primary">{{10546 | currency}}</b>
+          <b class="text-primary">{{record.accrued_profit | currency}}</b>
         </span>
         <div fxLayout="row" fxLayoutAlign="space-between center" class="full-width pb-10">
           <span class="info-investment">
             {{'finance.investment-history.entry' | translate}}&nbsp;
-            {{'Tue Jun 15 2021 12:01:00 GMT-0400' | date:'M/d/yyyy'}}
+            {{record.start_date | date:'M/d/yyyy'}}
           </span>
           <span class="info-investment">
             {{'finance.investment-history.expiration' | translate}}&nbsp;
-            {{'Tue Jun 15 2021 12:01:00 GMT-0400' | date:'M/d/yyyy'}}
-          </span>
-        </div>
-      </li>
-      <li class="active-investment-detail" fxLayout="column" fxLayoutAlign="center start">
-        <div fxLayout="row" fxLayoutAlign="start center" class="pb-10">
-          <span class="badge-investment">PGH</span>
-          <span class="company-name">Europa Avenida (MTC)</span>
-        </div>
-        <div fxLayout="row" fxLayoutAlign="space-between center" class="full-width pb-10">
-          <span class="info-investment">
-            {{'finance.investment-history.investment' | translate}}&nbsp;
-            <b class="text-primary">{{100000 | currency}}</b>
-          </span>
-          <span class="info-investment">
-            {{'finance.investment-history.obj-profitability-resume' | translate}}&nbsp;
-            <b class="text-primary">{{0.09 | percent:'.0-2'}}</b>
-          </span>
-        </div>
-        <span class="info-investment pb-10">
-          {{'finance.investment-history.accrued-interest' | translate}}&nbsp;
-          <b class="text-primary">{{10546 | currency}}</b>
-        </span>
-        <div fxLayout="row" fxLayoutAlign="space-between center" class="full-width pb-10">
-          <span class="info-investment">
-            {{'finance.investment-history.entry' | translate}}&nbsp;
-            {{'Tue Jun 15 2021 12:01:00 GMT-0400' | date:'M/d/yyyy'}}
-          </span>
-          <span class="info-investment">
-            {{'finance.investment-history.expiration' | translate}}&nbsp;
-            {{'Tue Jun 15 2021 12:01:00 GMT-0400' | date:'M/d/yyyy'}}
-          </span>
-        </div>
-      </li>
-      <li class="active-investment-detail" fxLayout="column" fxLayoutAlign="center start">
-        <div fxLayout="row" fxLayoutAlign="start center" class="pb-10">
-          <span class="badge-investment">PGH</span>
-          <span class="company-name">Europa Avenida (MTC)</span>
-        </div>
-        <div fxLayout="row" fxLayoutAlign="space-between center" class="full-width pb-10">
-          <span class="info-investment">
-            {{'finance.investment-history.investment' | translate}}&nbsp;
-            <b class="text-primary">{{100000 | currency}}</b>
-          </span>
-          <span class="info-investment">
-            {{'finance.investment-history.obj-profitability-resume' | translate}}&nbsp;
-            <b class="text-primary">{{0.09 | percent:'.0-2'}}</b>
-          </span>
-        </div>
-        <span class="info-investment pb-10">
-          {{'finance.investment-history.accrued-interest' | translate}}&nbsp;
-          <b class="text-primary">{{10546 | currency}}</b>
-        </span>
-        <div fxLayout="row" fxLayoutAlign="space-between center" class="full-width pb-10">
-          <span class="info-investment">
-            {{'finance.investment-history.entry' | translate}}&nbsp;
-            {{'Tue Jun 15 2021 12:01:00 GMT-0400' | date:'M/d/yyyy'}}
-          </span>
-          <span class="info-investment">
-            {{'finance.investment-history.expiration' | translate}}&nbsp;
-            {{'Tue Jun 15 2021 12:01:00 GMT-0400' | date:'M/d/yyyy'}}
+            {{record.end_date | date:'M/d/yyyy'}}
           </span>
         </div>
       </li>

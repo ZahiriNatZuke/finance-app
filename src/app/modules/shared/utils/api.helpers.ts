@@ -15,10 +15,14 @@ export class ApiHelpers {
   public getLogOutURL() {
     return this.URL_API + '/logout';
   }
+
   public getGlobalPositionDataURL() {
     return this.URL_API + '/assets/data/finance.global-position.json';
   }
 
+  public getInvestmentHistoryDataURL() {
+    return this.URL_API + '/assets/data/finance.investment-history.json';
+  }
 
   public getHeadersWithOutAuth(): HttpHeaders {
     return new HttpHeaders({

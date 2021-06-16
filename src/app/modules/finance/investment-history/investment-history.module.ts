@@ -8,20 +8,22 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import {TranslateModule} from '@ngx-translate/core';
+import {LoaderModule} from '../../shared/modules/loader/loader.module';
 
 
 @NgModule({
   declarations: [
     InvestmentHistoryComponent
   ],
-  imports: [
-    CommonModule,
-    InvestmentHistoryRoutingModule,
-    FlexLayoutModule,
-    MatExpansionModule,
-    MatFormFieldModule,
-    MatSelectModule,
-    TranslateModule
-  ]
+    imports: [
+        CommonModule,
+        InvestmentHistoryRoutingModule,
+        FlexLayoutModule,
+        MatExpansionModule,
+        MatFormFieldModule,
+        MatSelectModule,
+        TranslateModule,
+        LoaderModule
+    ]
 })
 export class InvestmentHistoryModule { }
