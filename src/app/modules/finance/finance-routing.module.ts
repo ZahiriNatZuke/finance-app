@@ -16,9 +16,6 @@ const routes: Routes = [
   {
     path: 'investment-history',
     loadChildren: () => import('./investment-history/investment-history.module').then(m => m.InvestmentHistoryModule)
-  },
-  {
-    path: '**', redirectTo: 'global-position', pathMatch: 'full'
   }
 ];
 

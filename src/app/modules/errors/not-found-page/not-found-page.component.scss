@@ -1,0 +1,124 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.st1 {
+  font-size: 83.0285px;
+}
+
+.st2 {
+  fill: gray;
+}
+
+svg {
+  width: 500px;
+  height: 400px;
+  text-align: center;
+  fill: #16a085;
+}
+
+@media only screen and (max-width: 500px) {
+  svg {
+    width: 375px;
+  }
+}
+
+path#XMLID_5_ {
+  fill: #16a085;
+  filter: url(#blurFilter4);
+}
+
+path#XMLID_11_, path#XMLID_2_ {
+  fill: #16a085;
+}
+
+.circle {
+  animation: out 2s infinite ease-out;
+  fill: #16a085;
+}
+
+#container {
+  text-align: center;
+  background-color: #2d3a3aff;
+  height: 100%;
+  width: 100%;
+}
+
+.message-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  color: #16a085;
+  font-size: x-large;
+}
+
+.back-link{
+  color: #16a085;
+  font-size: large;
+  margin-top: 25px !important;
+  text-decoration: none;
+}
+
+.message:after {
+  content: "]";
+}
+
+.message:before {
+  content: "[";
+}
+
+.message:after, .message:before {
+  color: #16a085;
+  font-size: x-large;
+  -webkit-animation-name: opacity;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  animation-name: opacity;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  margin: 0 20px;
+}
+
+@-webkit-keyframes opacity {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes opacity {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes out {
+  0% {
+    r: 1;
+    opacity: 0.9;
+  }
+  25% {
+    r: 5;
+    opacity: 0.3;
+  }
+  50% {
+    r: 10;
+    opacity: 0.2;
+  }
+  75% {
+    r: 15;
+    opacity: 0.1;
+  }
+  100% {
+    r: 20;
+    opacity: 0;
+  }
+}

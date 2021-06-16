@@ -18,7 +18,11 @@ const routes: Routes = [
     loadChildren: () => import('./modules/finance/finance.module').then(m => m.FinanceModule)
   },
   {
-    path: '**', redirectTo: 'finance/global-position', pathMatch: 'full'
+    path: '404-error',
+    loadChildren: () => import('./modules/errors/not-found-page/not-found-page.module').then(m => m.NotFoundPageModule)
+  },
+  {
+    path: '**', redirectTo: '404-error', pathMatch: 'full'
   }
 ];
 
