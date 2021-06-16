@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
+import {AuthService} from '../auth/shared/services/auth.service';
+import {User} from '../auth/shared/interfaces/User';
 
 @Component({
   selector: 'app-finance',
@@ -9,14 +11,16 @@ import {Router} from '@angular/router';
 export class FinanceComponent implements OnInit {
   public bg: string = 'white';
   public userMenuOpened: boolean = false;
+  public authUser: User | null = null;
 
-  constructor(private _router: Router) {
+  constructor(private _router: Router, private authService: AuthService) {
+    this.authService.userObservable.subscribe(user => this.authUser = user);
   }
 
   ngOnInit(): void {
   }
 
   logout() {
-    this._router.navigate(['/auth/login']);
+    this.authService.LogOut();
   }
 }

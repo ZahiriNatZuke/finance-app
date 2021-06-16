@@ -11,7 +11,8 @@ import {registerLocaleData} from '@angular/common';
 // import ngx-translate and the http loader
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
-import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClient, HttpClientModule} from '@angular/common/http';
+import {AuthenticationInterceptor} from './modules/shared/utils/authentication.interceptor';
 
 registerLocaleData(es);
 
@@ -36,10 +37,17 @@ registerLocaleData(es);
   ],
   bootstrap: [AppComponent],
   providers: [
-    {provide: LOCALE_ID, useValue: 'es-Es'},
+    {
+      provide: LOCALE_ID, useValue: 'es-Es'
+    },
     {
       provide: DEFAULT_CURRENCY_CODE,
       useValue: 'EUR'
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthenticationInterceptor,
+      multi: true
     }
   ]
 })

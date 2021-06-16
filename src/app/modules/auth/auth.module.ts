@@ -12,31 +12,28 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {HttpClientModule} from '@angular/common/http';
 import {ReactiveFormsModule} from '@angular/forms';
-import {AuthService} from './auth.service';
 import {BrandLogoModule} from '../shared/modules/brand-logo/brand-logo.module';
 import {TranslateModule} from '@ngx-translate/core';
-
 
 @NgModule({
   declarations: [
     AuthComponent,
     LoginComponent
   ],
-    imports: [
-        CommonModule,
-        AuthRoutingModule,
-        FlexLayoutModule,
-        MatCardModule,
-        MatFormFieldModule,
-        MatInputModule,
-        MatButtonModule,
-        MatIconModule,
-        HttpClientModule,
-        ReactiveFormsModule,
-        BrandLogoModule,
-        TranslateModule
-    ],
-  providers: [AuthService]
+  imports: [
+    CommonModule,
+    AuthRoutingModule,
+    FlexLayoutModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MatIconModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    BrandLogoModule,
+    TranslateModule
+  ]
 })
 export class AuthModule {
 }

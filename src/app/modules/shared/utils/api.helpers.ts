@@ -1,4 +1,3 @@
-import {HttpHeaders} from '@angular/common/http';
 import {environment} from '../../../../environments/environment.prod';
 
 export class ApiHelpers {
@@ -26,22 +25,5 @@ export class ApiHelpers {
 
   public getPersonalDataURL() {
     return this.URL_API + '/assets/data/finance.personal-data.json';
-  }
-
-  public getHeadersWithOutAuth(): HttpHeaders {
-    return new HttpHeaders({
-      Accept: 'application/json',
-      'Content-Type': 'application/json',
-      'X-Requested-With': 'XMLHttpRequest'
-    });
-  }
-
-  public getHeadersWithAuth(): HttpHeaders {
-    return new HttpHeaders({
-      Accept: 'application/json',
-      'Content-Type': 'application/json',
-      'X-Requested-With': 'XMLHttpRequest',
-      Authorization: `Bearer ${sessionStorage.getItem('X-Auth-Token')}`
-    });
   }
 }

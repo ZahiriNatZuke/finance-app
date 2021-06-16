@@ -2,10 +2,11 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {FinanceComponent} from './modules/finance/finance.component';
 import {AuthComponent} from './modules/auth/auth.component';
+import {AuthenticationGuard} from './modules/auth/shared/guards/authentication.guard';
 
 const routes: Routes = [
   {
-    path: '', redirectTo: 'finance/global-position', pathMatch: 'full'
+    path: '', redirectTo: 'auth/login', pathMatch: 'full'
   },
   {
     path: 'auth',
@@ -15,7 +16,8 @@ const routes: Routes = [
   {
     path: 'finance',
     component: FinanceComponent,
-    loadChildren: () => import('./modules/finance/finance.module').then(m => m.FinanceModule)
+    loadChildren: () => import('./modules/finance/finance.module').then(m => m.FinanceModule),
+    canActivate: [AuthenticationGuard]
   },
   {
     path: '404-error',

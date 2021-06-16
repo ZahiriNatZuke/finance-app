@@ -14,7 +14,6 @@ import {FooterModule} from '../shared/modules/footer/footer.module';
 import {MatMenuModule} from '@angular/material/menu';
 import {TranslateModule} from '@ngx-translate/core';
 
-
 @NgModule({
   declarations: [
     FinanceComponent

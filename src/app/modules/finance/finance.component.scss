@@ -1,14 +1,15 @@
 .menu-container {
-  position: relative;
   display: flex;
   align-items: center;
   background: #232323;
   color: #cdcdcd;
   padding: 20px;
-  z-index: 1;
+  z-index: 1001;
   -webkit-user-select: none;
   user-select: none;
   box-sizing: border-box;
+  position: sticky;
+  top: 0;
 
   .menu-logo {
     line-height: 0;
