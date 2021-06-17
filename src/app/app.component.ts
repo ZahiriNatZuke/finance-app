@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {TranslateService} from '@ngx-translate/core';
 import {environment} from '../environments/environment';
 import {Logger} from './modules/shared/utils/logger';
+import {I18nService} from './modules/shared/modules/i18n/i18n.service';
 
 @Component({
   selector: 'app-root',
@@ -10,8 +10,8 @@ import {Logger} from './modules/shared/utils/logger';
 })
 export class AppComponent implements OnInit {
 
-  constructor(private translate: TranslateService) {
-    translate.setDefaultLang('es');
+  constructor(private i18nService: I18nService) {
+    this.i18nService.init(environment.defaultLanguage, environment.supportedLanguages);
   }
 
   ngOnInit(): void {

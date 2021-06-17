@@ -21,6 +21,8 @@
 
     <span class="menu-spacer"></span>
 
+    <app-i18n [icon]="true"></app-i18n>
+
     <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
       <mat-icon>{{sidenav.opened ? 'close' : 'menu'}}</mat-icon>
     </button>
@@ -51,7 +53,7 @@
   <mat-sidenav #sidenav class="sidenav-container">
     <div class="user-sidenav" fxLayout="column" fxLayoutAlign="center center">
       <div fxLayout="row">
-        <mat-icon class="icon-user-sidenav">person</mat-icon>
+        <mat-icon class="icon-user-sidenav mr-10">person</mat-icon>
         <div fxLayout="column" fxLayoutAlign="center center">
           <div class="full-width" fxLayout="row" fxLayoutAlign="end center">
             <button mat-icon-button (click)="logout()">

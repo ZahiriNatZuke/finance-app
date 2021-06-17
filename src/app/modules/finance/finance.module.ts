@@ -13,25 +13,27 @@ import {MatButtonModule} from '@angular/material/button';
 import {FooterModule} from '../shared/modules/footer/footer.module';
 import {MatMenuModule} from '@angular/material/menu';
 import {TranslateModule} from '@ngx-translate/core';
+import {I18nModule} from '../shared/modules/i18n/i18n.module';
 
 @NgModule({
   declarations: [
     FinanceComponent
   ],
-  imports: [
-    CommonModule,
-    FinanceRoutingModule,
-    MatIconModule,
-    MatToolbarModule,
-    BrandLogoModule,
-    FlexLayoutModule,
-    MatSidenavModule,
-    MatListModule,
-    MatButtonModule,
-    FooterModule,
-    MatMenuModule,
-    TranslateModule
-  ]
+    imports: [
+        CommonModule,
+        FinanceRoutingModule,
+        MatIconModule,
+        MatToolbarModule,
+        BrandLogoModule,
+        FlexLayoutModule,
+        MatSidenavModule,
+        MatListModule,
+        MatButtonModule,
+        FooterModule,
+        MatMenuModule,
+        TranslateModule,
+        I18nModule
+    ]
 })
 export class FinanceModule {
 }
