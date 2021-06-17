@@ -1,0 +1,109 @@
+.table-container {
+  padding: 1rem;
+}
+
+table {
+  width: 100%;
+
+}
+
+.overflow-x {
+  overflow-x: auto;
+}
+
+.spinner-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+  flex: 1 0 auto;
+}
+
+.bullet-list {
+  padding: 10px 10px 10px 30px;
+  margin: 0;
+}
+
+.center {
+  text-align: center;
+}
+
+.mat-column-op {
+  width: 10% !important;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background-color: #FAFAFA;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #BDBDBD;
+  border-radius: 4px;
+  width: 1em;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B0BEC5;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: #B0BEC5;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #FAFAFA;
+  border-radius: 4px;
+  width: 6px;
+}
+
+.mat-header-cell {
+  background: #248232ff;
+  color: #fcfffcff;
+}
+
+::ng-deep .mat-sort-header-arrow {
+  color: #fcfffcff;
+}
+
+.font-12 {
+  font-size: 12px;
+}
+
+.web-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  width: max-content;
+  padding: 6px 8px;
+  border-radius: 4px;
+  box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, .12), 0 1px 1px 0 rgba(0, 0, 0, .24);
+
+  .text-info {
+    font-size: 12px;
+    line-height: 24px;
+  }
+}
+
+.earring {
+  color: #fcfffcff;
+  background: red;
+}
+
+.sent {
+  color: #fcfffcff;
+  background: orange;
+}
+
+.accepted {
+  color: #fcfffcff;
+  background: #248232ff;
+}
+
+.no-access-info {
+  color: #fcfffcff;
+  background: dimgray;
+}
