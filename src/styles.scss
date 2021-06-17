@@ -10,7 +10,6 @@ $my-theme: mat.define-light-theme((color: (primary: $my-primary, accent: $my-acc
 @include mat.core($my-theme);
 @include mat.all-component-themes($my-theme);
 @include mat.all-component-typographies($my-theme);
-@include mat.all-component-colors($my-theme);
 @include mat.strong-focus-indicators-theme($my-theme);
 
 /* CUSTOM THEME END */

@@ -90,7 +90,7 @@ export class AdministrationComponent implements OnInit, AfterContentChecked {
         pageSize: 10,
         pageSizeOptions: [10, 15, 20]
       },
-      showOpSelect: true,
+      showOpSelect: false,
       SelectorSettings: {
         label: 'dt.select_label',
         singularLiteral: 'dt.single_literal_select',
