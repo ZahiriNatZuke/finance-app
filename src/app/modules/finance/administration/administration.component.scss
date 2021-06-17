@@ -1,0 +1,34 @@
+@import 'src/assets/palette';
+
+.administration-container {
+  padding: 2rem;
+  height: 100%;
+  min-height: calc(100vh - 326px);
+
+  .title {
+    font-weight: bold;
+    font-size: 36px;
+  }
+}
+
+.administration-container-sm {
+  height: 100%;
+  min-height: calc(100vh - 326px);
+
+  .header-sm {
+    background: $forest-green-web;
+    color: $baby-powder;
+    width: 100%;
+    padding: 10px 0 10px 10px;
+
+    .title {
+      font-size: 28px;
+      margin: 0;
+    }
+
+    .title-sm {
+      font-size: 24px;
+      margin: 0;
+    }
+  }
+}

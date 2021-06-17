@@ -1,83 +1,108 @@
 {
-	"auth": {
-		"login": {
-			"error": {
-				"minlength": {
-					"password": "La contraseña debe tener al menos 8 caracteres"
-				},
-				"required": {
-					"password": "La contraseña es requerida",
-					"user": "El usuario es requerido"
-				}
-			},
-			"info": "Si no recuerdas tus claves de acceso ponte en contacto con nosotros en el teléfono 911 548 520",
-			"password": "Contraseña",
-			"submit": "Entrar",
-			"user": "Usuario"
-		}
-	},
-	"finance": {
-		"filter": {
-			"end-date": "Fecha Salida",
-			"kind-op": "Tipo Operación",
-			"label": "Ordenar por:",
-			"profitability-obtained": "Rentabilidad Obtenida",
-			"start-date": "Fecha Entrada"
-		},
-		"footer": {
-			"address": "Calle Ciudad Real 1A, 28223, Pozuelo de Alcorcón, Madrid.",
-			"address-partial": " C/ Ciudad Real 1",
-			"cookies-policy": "Política de Cookies",
-			"legal-warning": "Aviso Legal",
-			"privacy-policy": "Política de Privacidad"
-		},
-		"global-position": {
-			"accrued-interest": "Intereses Devengados:",
-			"accrued-profit": "Int. devengados:",
-			"active-investment": "Inversiones activas",
-			"active-investment-detail": "Detalle Inversiones Activas",
-			"capital-investment": "Total capital en inversiones activas:",
-			"end-date": "F. vencimiento:",
-			"entry": "Entrada:",
-			"expiration": "Vencimiento:",
-			"info": "(1) Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cumque debitis dolore doloremque, esse eum molestiae odit omnis porro sed!",
-			"investment": "Inversión:",
-			"kind-op": "Tipo de Operación:",
-			"media-profit": "Rentabilidad media acumulada:",
-			"obj-profitability": "Rentabilidad Objetiva:",
-			"obj-profitability-resume": "Rent. Obj:",
-			"profit": "Intereses devengados periodo actual:",
-			"start-date": "F. entrada:"
-		},
-		"investment-history": {
-			"accrued-interest": "Intereses Devengados:",
-			"accrued-interest-resume": "Int. Devengados:",
+  "auth": {
+    "login": {
+      "error": {
+        "minlength": {
+          "password": "La contraseña debe tener al menos 8 caracteres"
+        },
+        "required": {
+          "password": "La contraseña es requerida",
+          "user": "El usuario es requerido"
+        }
+      },
+      "info": "Si no recuerdas tus claves de acceso ponte en contacto con nosotros en el teléfono 911 548 520",
+      "password": "Contraseña",
+      "submit": "Entrar",
+      "user": "Usuario"
+    }
+  },
+  "finance": {
+    "filter": {
+      "end-date": "Fecha Salida",
+      "kind-op": "Tipo Operación",
+      "label": "Ordenar por:",
+      "profitability-obtained": "Rentabilidad Obtenida",
+      "start-date": "Fecha Entrada"
+    },
+    "footer": {
+      "address": "Calle Ciudad Real 1A, 28223, Pozuelo de Alcorcón, Madrid.",
+      "address-partial": " C/ Ciudad Real 1",
+      "cookies-policy": "Política de Cookies",
+      "legal-warning": "Aviso Legal",
+      "privacy-policy": "Política de Privacidad"
+    },
+    "global-position": {
+      "accrued-interest": "Intereses Devengados:",
+      "accrued-profit": "Int. devengados:",
+      "active-investment": "Inversiones activas",
+      "active-investment-detail": "Detalle Inversiones Activas",
+      "capital-investment": "Total capital en inversiones activas:",
       "end-date": "F. vencimiento:",
-			"entry": "Entrada:",
-			"expiration": "Vencimiento:",
-			"generated-interest": "Interés generado:",
-			"header-detail": "Histórico Inversiones cerradas",
-			"info": "(1) Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cumque debitis dolore doloremque, esse eum molestiae odit omnis porro sed!",
-			"investment": "Inversión:",
+      "entry": "Entrada:",
+      "expiration": "Vencimiento:",
+      "info": "(1) Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cumque debitis dolore doloremque, esse eum molestiae odit omnis porro sed!",
+      "investment": "Inversión:",
+      "kind-op": "Tipo de Operación:",
+      "media-profit": "Rentabilidad media acumulada:",
+      "obj-profitability": "Rentabilidad Objetiva:",
+      "obj-profitability-resume": "Rent. Obj:",
+      "profit": "Intereses devengados periodo actual:",
+      "start-date": "F. entrada:"
+    },
+    "investment-history": {
+      "accrued-interest": "Intereses Devengados:",
+      "accrued-interest-resume": "Int. Devengados:",
+      "end-date": "F. vencimiento:",
+      "entry": "Entrada:",
+      "expiration": "Vencimiento:",
+      "generated-interest": "Interés generado:",
+      "header-detail": "Histórico Inversiones cerradas",
+      "info": "(1) Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cumque debitis dolore doloremque, esse eum molestiae odit omnis porro sed!",
+      "investment": "Inversión:",
       "kind-op": "Tipo de Operación:",
       "media-profitability": "Rentabilidad Media:",
-			"obj-profitability": "Rentabilidad Objetiva:",
-			"obj-profitability-resume": "Rent. Obj:",
-			"title": "Resumen Inversiones cerradas",
+      "obj-profitability": "Rentabilidad Objetiva:",
+      "obj-profitability-resume": "Rent. Obj:",
+      "title": "Resumen Inversiones cerradas",
       "start-date": "F. entrada:"
-		},
-		"nav": {
-			"global-position": "Posición Global",
-			"investment-history": "Histórico de Inversiones",
-			"logout": "Desconectar",
-			"my-data": "Mis Datos"
-		},
-		"personal-data": {
-			"info": "Si deseas modificar tus datos personales ponte en contacto con nosotros en el teléfono 911 548 520."
-		}
-	},
+    },
+    "nav": {
+      "global-position": "Posición Global",
+      "investment-history": "Histórico de Inversiones",
+      "logout": "Desconectar",
+      "my-data": "Mis Datos",
+      "administration": "Administración"
+    },
+    "personal-data": {
+      "info": "Si deseas modificar tus datos personales ponte en contacto con nosotros en el teléfono 911 548 520."
+    }
+  },
   "error": {
     "404": "Página no Encontrada",
     "back-site": "Regresar"
+  },
+  "dt": {
+    "full_name": "Nombre Completo",
+    "language": "Idioma",
+    "web_access": "Acceso Web",
+    "access_info": "Información de Acceso",
+    "select_label": "Seleccionar Columnas",
+    "single_literal_select": "otro",
+    "plural_literal_select": "otros",
+    "modal_title_elimination": "Control de Eliminación",
+    "modal_content_elimination": {
+      "user": "¿Está usted seguro que desea eliminar este usuario?"
+    },
+    "earring": "Pendiente Invitación",
+    "sent": "Invitación Enviada",
+    "accepted": "Invitación Aceptada",
+    "no-access-info": "Sin Información",
+    "filter_placeholder": "Filtrar"
+  },
+  "common": {
+    "update": "Actualizar",
+    "delete": "Eliminar",
+    "accept": "Aceptar",
+    "cancel": "Cancelar"
   }
 }

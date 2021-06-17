@@ -1,4 +1,4 @@
-import {environment} from '../../../../environments/environment.prod';
+import {environment} from '../../../../environments/environment';
 
 export class ApiHelpers {
   public URL_API: string;
@@ -25,5 +25,9 @@ export class ApiHelpers {
 
   public getPersonalDataURL() {
     return this.URL_API + '/assets/data/finance.personal-data.json';
+  }
+
+  public getAdministrationDataURL() {
+    return this.URL_API + '/assets/data/finance.administration.json';
   }
 }

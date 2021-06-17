@@ -1,4 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+/* CUSTOM THEME START */
+@use '~@angular/material' as mat;
+
+$my-primary: mat.define-palette(mat.$green-palette, 500);
+$my-accent: mat.define-palette(mat.$cyan-palette, A200, A100, A400);
+$my-warn: mat.define-palette(mat.$red-palette);
+
+$my-theme: mat.define-light-theme((color: (primary: $my-primary, accent: $my-accent, warn: $my-warn)));
+
+@include mat.core($my-theme);
+@include mat.all-component-themes($my-theme);
+@include mat.all-component-typographies($my-theme);
+@include mat.all-component-colors($my-theme);
+@include mat.strong-focus-indicators-theme($my-theme);
+
+/* CUSTOM THEME END */
+
+/* CUSTOM STYLES */
+
 @import 'assets/palette';
 
 html, body {
@@ -32,6 +50,11 @@ body {
 
 .button-accept {
   background-color: $forest-green-web;
+  color: $baby-powder !important;
+}
+
+.button-cancel {
+  background-color: red;
   color: $baby-powder !important;
 }
 
@@ -99,6 +122,8 @@ body {
   font-weight: bold;
 }
 
+/* CUSTOM SCROLLBAR START */
+
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -125,6 +150,10 @@ body {
   border-radius: 4px;
   width: 6px;
 }
+
+/* CUSTOM SCROLLBAR END */
+
+/* CUSTOM PRELOADER START */
 
 $color: #2edc74;
 $colorRight: darken($color, 15%);
@@ -282,3 +311,7 @@ html {
   justify-content: center;
   align-items: center;
 }
+
+/* CUSTOM PRELOADER END */
+
+/* CUSTOM STYLES END */

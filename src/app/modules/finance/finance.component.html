@@ -16,6 +16,11 @@
             {{'finance.nav.investment-history' | translate}}
           </a>
         </li>
+        <li>
+          <a routerLink="/finance/administration" routerLinkActive="active">
+            {{'finance.nav.administration' | translate}}
+          </a>
+        </li>
       </ul>
     </div>
 
@@ -76,6 +81,9 @@
       </a>
       <a mat-list-item routerLink="/finance/investment-history" routerLinkActive="active" (click)="sidenav.toggle()">
         {{'finance.nav.investment-history' | translate}}
+      </a>
+      <a mat-list-item routerLink="/finance/administration" routerLinkActive="active" (click)="sidenav.toggle()">
+        {{'finance.nav.administration' | translate}}
       </a>
     </mat-nav-list>
   </mat-sidenav>

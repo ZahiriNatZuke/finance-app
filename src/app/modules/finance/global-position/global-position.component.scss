@@ -119,6 +119,8 @@
 }
 
 .global-position-container-sm {
+  height: 100%;
+  min-height: calc(100vh - 326px);
 
   .header-sm {
     background: $forest-green-web;

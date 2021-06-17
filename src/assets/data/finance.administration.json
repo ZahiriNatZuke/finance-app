@@ -1,0 +1,28 @@
+{
+  "data": [
+    {
+      "full_name": "Campbell Helen",
+      "language": "es",
+      "web_access": true,
+      "access_info": 0
+    },
+    {
+      "full_name": "Walker Shirley",
+      "language": "en",
+      "web_access": true,
+      "access_info": 2
+    },
+    {
+      "full_name": "Nguyen Marie",
+      "language": "es",
+      "web_access": false,
+      "access_info": 1
+    },
+    {
+      "full_name": "Bailey Kenneth",
+      "language": "en",
+      "web_access": true,
+      "access_info": 0
+    }
+  ]
+}

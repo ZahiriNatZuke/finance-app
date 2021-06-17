@@ -1,0 +1,17 @@
+<app-loader *ngIf="showLoader" [withContainer]="false"></app-loader>
+
+<div fxLayout="column" fxLayoutGap="30px" ngClass.gt-sm="administration-container"
+     ngClass.lt-md="administration-container-sm" fxLayoutAlign="start center">
+
+  <div [ngStyle.gt-sm]="{width: '75%'}" [ngStyle.lt-md]="{width: '100%'}" class="pb-20">
+    <div ngClass.lt-md="header-sm" fxLayout="row" fxLayoutAlign="start center">
+      <h1 ngClass.gt-sm="title text-primary" ngClass.lt-md="title white-color">
+        {{'finance.nav.administration' | translate}}
+      </h1>
+    </div>
+
+    <dynamic-table class="width-75" (operationEvent)="triggerOption($event)"></dynamic-table>
+  </div>
+
+</div>
+

@@ -1,81 +1,106 @@
 {
-	"auth": {
-		"login": {
-			"error": {
-				"minlength": {
-					"password": "The password must be at least 8 characters long"
-				},
-				"required": {
-					"password": "Password is required",
-					"user": "User is required"
-				}
-			},
-			"info": "If you do not remember your access codes, contact us on the phone 911 548 520",
-			"password": "Password",
-			"submit": "Login",
-			"user": "User"
-		}
-	},
-	"finance": {
-		"filter": {
-			"end-date": "Out Date",
-			"kind-op": "Type Operation",
-			"label": "Sort by:",
-			"profitability-obtained": "Profitability Obtained",
-			"start-date": "Entry Date"
-		},
-		"footer": {
-			"address": "Street Ciudad Real 1A, 28223, Pozuelo de Alcorcón, Madrid.",
-			"address-partial": " St/ Ciudad Real 1",
-			"cookies-policy": "Cookies Policy",
-			"legal-warning": "Legal Warning",
-			"privacy-policy": "Privacy Policy"
-		},
-		"global-position": {
-			"accrued-interest": "Accrued Interest:",
-			"accrued-profit": "Int. Accrued:",
-			"active-investment": "Active investments",
-			"active-investment-detail": "Active Investments Detail",
-			"capital-investment": "Total capital in active investments:",
-			"end-date": "D. expiration:",
-			"entry": "Entry:",
-			"expiration": "Expiration:",
-			"info": "(1) Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cumque debitis dolore doloremque, esse eum molestiae odit omnis porro sed!",
-			"investment": "Investment:",
-			"kind-op": "Type of Operation:",
-			"media-profit": "Average accumulated profitability:",
-			"obj-profitability": "Objective Profitability:",
-			"obj-profitability-resume": "Obj. Prof.:",
-			"profit": "Interest accrued current period:",
-			"start-date": "D. entry:"
-		},
-		"investment-history": {
-			"accrued-interest": "Accrued Interest:",
-			"accrued-interest-resume": "Accrued Int.:",
-			"entry": "Entry:",
-			"expiration": "Expiration:",
-			"generated-interest": "Interest generated:",
-			"header-detail": "Historical Closed Investments",
-			"info": "(1) Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cumque debitis dolore doloremque, esse eum molestiae odit omnis porro sed!",
-			"investment": "Investment:",
+  "auth": {
+    "login": {
+      "error": {
+        "minlength": {
+          "password": "The password must be at least 8 characters long"
+        },
+        "required": {
+          "password": "Password is required",
+          "user": "User is required"
+        }
+      },
+      "info": "If you do not remember your access codes, contact us on the phone 911 548 520",
+      "password": "Password",
+      "submit": "Login",
+      "user": "User"
+    }
+  },
+  "finance": {
+    "filter": {
+      "end-date": "Out Date",
+      "kind-op": "Type Operation",
+      "label": "Sort by:",
+      "profitability-obtained": "Profitability Obtained",
+      "start-date": "Entry Date"
+    },
+    "footer": {
+      "address": "Street Ciudad Real 1A, 28223, Pozuelo de Alcorcón, Madrid.",
+      "address-partial": " St/ Ciudad Real 1",
+      "cookies-policy": "Cookies Policy",
+      "legal-warning": "Legal Warning",
+      "privacy-policy": "Privacy Policy"
+    },
+    "global-position": {
+      "accrued-interest": "Accrued Interest:",
+      "accrued-profit": "Int. Accrued:",
+      "active-investment": "Active investments",
+      "active-investment-detail": "Active Investments Detail",
+      "capital-investment": "Total capital in active investments:",
+      "end-date": "D. expiration:",
+      "entry": "Entry:",
+      "expiration": "Expiration:",
+      "info": "(1) Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cumque debitis dolore doloremque, esse eum molestiae odit omnis porro sed!",
+      "investment": "Investment:",
+      "kind-op": "Type of Operation:",
+      "media-profit": "Average accumulated profitability:",
+      "obj-profitability": "Objective Profitability:",
+      "obj-profitability-resume": "Obj. Prof.:",
+      "profit": "Interest accrued current period:",
+      "start-date": "D. entry:"
+    },
+    "investment-history": {
+      "accrued-interest": "Accrued Interest:",
+      "accrued-interest-resume": "Accrued Int.:",
+      "entry": "Entry:",
+      "expiration": "Expiration:",
+      "generated-interest": "Interest generated:",
+      "header-detail": "Historical Closed Investments",
+      "info": "(1) Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cumque debitis dolore doloremque, esse eum molestiae odit omnis porro sed!",
+      "investment": "Investment:",
       "kind-op": "Type of Operation:",
       "media-profitability": "Average Profitability:",
-			"obj-profitability": "Objective Profitability:",
-			"obj-profitability-resume": "Obj. Prof.:",
-			"title": "Summary Closed investments"
-		},
-		"nav": {
-			"global-position": "Global Position",
-			"investment-history": "Investment History",
-			"logout": "Logout",
-			"my-data": "Personal Information"
-		},
-		"personal-data": {
-			"info": "If you wish to modify your personal data, please contact us at 911 548 520."
-		}
-	},
+      "obj-profitability": "Objective Profitability:",
+      "obj-profitability-resume": "Obj. Prof.:",
+      "title": "Summary Closed investments"
+    },
+    "nav": {
+      "global-position": "Global Position",
+      "investment-history": "Investment History",
+      "logout": "Logout",
+      "my-data": "Personal Information",
+      "administration": "Administration"
+    },
+    "personal-data": {
+      "info": "If you wish to modify your personal data, please contact us at 911 548 520."
+    }
+  },
   "error": {
     "404": "Page not Found",
     "back-site": "Back to Site"
+  },
+  "dt": {
+    "full_name": "Full Name",
+    "language": "language",
+    "web_access": "Web Access",
+    "access_info": "Access Information",
+    "select_label": "select Columns",
+    "single_literal_select": "other",
+    "plural_literal_select": "others",
+    "modal_title_elimination": "Elimination Control",
+    "modal_content_elimination": {
+      "user": "Are you sure do you want to eliminate this user?"
+    },
+    "earring": "Invitation Earring",
+    "sent": "Invitation Sent",
+    "accepted": "Invitation Accepted",
+    "no-access-info": "No Information",
+    "filter_placeholder": "Filter"
+  },
+  "common": {
+    "update": "Update",
+    "delete": "Delete",
+    "accept": "Accept",
+    "cancel": "Cancel"
   }
 }

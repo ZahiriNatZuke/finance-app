@@ -16,6 +16,10 @@ const routes: Routes = [
   {
     path: 'investment-history',
     loadChildren: () => import('./investment-history/investment-history.module').then(m => m.InvestmentHistoryModule)
+  },
+  {
+    path: 'administration',
+    loadChildren: () => import('./administration/administration.module').then(m => m.AdministrationModule)
   }
 ];
 

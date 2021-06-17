@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  URL_API: '',
   defaultLanguage: 'es',
   supportedLanguages: ['es', 'en']
 };
