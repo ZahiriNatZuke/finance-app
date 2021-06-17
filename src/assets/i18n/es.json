@@ -103,6 +103,9 @@
     "update": "Actualizar",
     "delete": "Eliminar",
     "accept": "Aceptar",
-    "cancel": "Cancelar"
+    "cancel": "Cancelar",
+    "detective-activate-account": "Activar/Desactivar Cuenta",
+    "send-invitation": "Enviar Invitación",
+    "password-reset": "Resetear Contraseña"
   }
 }

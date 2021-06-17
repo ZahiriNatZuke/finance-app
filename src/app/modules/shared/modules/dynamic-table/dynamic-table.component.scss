@@ -107,3 +107,19 @@ table {
   color: #fcfffcff;
   background: dimgray;
 }
+
+.short-name-logo {
+  border-radius: 100%;
+  color: #fcfffcff;
+  background: #2ba84aff;
+  text-align: center;
+  padding: 4px;
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+
+  span {
+    position: relative;
+    top: 2px;
+  }
+}

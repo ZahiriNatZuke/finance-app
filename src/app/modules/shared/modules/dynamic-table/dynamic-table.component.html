@@ -52,6 +52,12 @@
             <b>{{element | nestedProperty:column.column | uppercase}}</b>
           </span>
 
+          <div class="short-name-logo" *ngIf="column.type === columnType.Logo">
+            <span>
+              {{getShortName(element | nestedProperty: removeLogoSuffix(column.column)) | uppercase}}
+            </span>
+          </div>
+
         </td>
       </ng-container>
 
@@ -72,17 +78,12 @@
             <mat-icon>more_vert</mat-icon>
           </button>
           <mat-menu #matMenuCRUD="matMenu">
-            <button mat-menu-item class="font-12" (click)="option(typeOpEvent.Update, row)" *ngIf="showOpEdit">
-              <mat-icon class="material-icons-outlined" style="color:#388E3C">
-                {{OptionSettings.Update.icon}}
+            <button mat-menu-item class="font-12" *ngFor="let Option of OptionSettings.Options"
+                    (click)="option(Option.event, row)">
+              <mat-icon class="material-icons-outlined" [style.color]="Option.color">
+                {{Option.icon}}
               </mat-icon>
-              {{OptionSettings.Update.literal | translate}}
-            </button>
-            <button mat-menu-item class="font-12" (click)="option(typeOpEvent.Delete, row)" *ngIf="showOpDelete">
-              <mat-icon class="material-icons-outlined" style="color:#F44336">
-                {{OptionSettings.Delete.icon}}
-              </mat-icon>
-              {{OptionSettings.Delete.literal | translate}}
+              {{Option.literal | translate}}
             </button>
           </mat-menu>
         </td>

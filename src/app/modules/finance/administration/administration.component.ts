@@ -35,6 +35,12 @@ export class AdministrationComponent implements OnInit, AfterContentChecked {
     this.inputConfig = {
       displayedColumns: [
         {
+          header: '',
+          column: 'full_name_logo',
+          show: true,
+          type: ColumnType.Logo
+        },
+        {
           header: 'dt.full_name',
           column: 'full_name',
           show: true,
@@ -67,14 +73,26 @@ export class AdministrationComponent implements OnInit, AfterContentChecked {
       showOpDelete: true,
       OptionSettings: {
         iconNew: 'add_circle_outlined',
-        Update: {
-          icon: 'edit',
-          literal: 'common.update',
-        },
-        Delete: {
-          icon: 'delete_outlined',
-          literal: 'common.delete',
-        }
+        Options: [
+          {
+            icon: 'manage_accounts',
+            literal: 'common.detective-activate-account',
+            event: TypeOpEvent.DetectiveOrActivate,
+            color: 'blue'
+          },
+          {
+            icon: 'outbox',
+            literal: 'common.send-invitation',
+            event: TypeOpEvent.Invitation,
+            color: 'green'
+          },
+          {
+            icon: 'password',
+            literal: 'common.password-reset',
+            event: TypeOpEvent.Password,
+            color: 'orange'
+          }
+        ]
       },
       showFilter: true,
       FilterSettings: {
@@ -117,11 +135,11 @@ export class AdministrationComponent implements OnInit, AfterContentChecked {
 
   public triggerOption(event: OperationEvent): void {
     switch (event.type) {
-      case TypeOpEvent.New:
+      case TypeOpEvent.DetectiveOrActivate:
         break;
-      case TypeOpEvent.Update:
+      case TypeOpEvent.Invitation:
         break;
-      case TypeOpEvent.Delete:
+      case TypeOpEvent.Password:
         break;
     }
   }

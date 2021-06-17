@@ -47,14 +47,20 @@ export class DynamicTableComponent implements OnInit {
   private endFieldSticky: string | undefined;
   public OptionSettings: OptionSettings = {
     iconNew: 'add_circle',
-    Update: {
-      icon: 'edit',
-      literal: this.translate.instant('common.update')
-    },
-    Delete: {
-      icon: 'delete',
-      literal: this.translate.instant('common.delete')
-    }
+    Options: [
+      {
+        icon: 'edit',
+        literal: 'common.update',
+        event: TypeOpEvent.Update,
+        color: 'green'
+      },
+      {
+        icon: 'delete',
+        literal: 'common.delete',
+        event: TypeOpEvent.Delete,
+        color: 'red'
+      }
+    ]
   };
   public showFilter: boolean = false;
   public showPaginator: boolean = false;
@@ -193,5 +199,22 @@ export class DynamicTableComponent implements OnInit {
     }
 
     return 'web-info no-access-info';
+  }
+
+  public removeLogoSuffix(data: string): string {
+    if (data.endsWith('_logo')) {
+      const index = data.indexOf('_logo')
+      return data.slice(0, index);
+    } else {
+      return data;
+    }
+  }
+
+  public getShortName(data: string): string {
+    const splits = data.split(' ');
+    if (splits.length > 1)
+      return `${splits[0].charAt(0)}${splits[1].charAt(0)}`
+    else
+      return data.slice(0, 2)
   }
 }

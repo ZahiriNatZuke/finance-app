@@ -4,5 +4,5 @@ export interface OperationEvent {
 }
 
 export enum TypeOpEvent {
-  New = 'N', Update = 'M', Delete = 'E'
+  New = 'N', Update = 'M', Delete = 'E', DetectiveOrActivate = 'D/A', Invitation = 'I', Password = 'P'
 }
