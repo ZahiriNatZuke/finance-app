@@ -13,13 +13,12 @@ import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {HTTP_INTERCEPTORS, HttpClient, HttpClientModule} from '@angular/common/http';
 import {AuthenticationInterceptor} from './modules/auth/shared/interceptors/authentication.interceptor';
+import {ErrorHandlerInterceptor} from './modules/shared/interceptors/error-handler.interceptor';
 
 registerLocaleData(es);
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     // ngx-translate and the loader module
@@ -48,7 +47,12 @@ registerLocaleData(es);
       provide: HTTP_INTERCEPTORS,
       useClass: AuthenticationInterceptor,
       multi: true
-    }
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ErrorHandlerInterceptor,
+      multi: true,
+    },
   ]
 })
 export class AppModule {
