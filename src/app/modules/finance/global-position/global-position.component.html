@@ -3,7 +3,7 @@
 <div *ngIf="!showLoader" fxLayout="column" fxLayoutGap="30px" ngClass.gt-sm="global-position-container"
      ngClass.lt-md="global-position-container-sm" fxLayoutAlign="start center">
 
-  <div>
+  <div [ngStyle.lt-md]="{width: '100%'}">
     <div ngClass.lt-md="header-sm" fxLayout="row" fxLayoutAlign="start center">
       <h1 ngClass.gt-sm="title text-primary" ngClass.lt-md="title white-color">
         {{'finance.nav.global-position' | translate}}
@@ -16,7 +16,7 @@
       </p>
 
       <ul>
-        <li fxLayout.gt-sm="row" fxLayout.lt-md="column" fxLayoutGap="10px" fxLayoutAlign.gt-sm="space-between end"
+        <li fxLayout.gt-sm="row" fxLayout.lt-md="column" fxLayoutGap="10px" fxLayoutAlign.gt-sm="space-between center"
             fxLayoutAlign.lt-md="center start">
           <p class="text-data">
             {{'finance.global-position.capital-investment' | translate}}

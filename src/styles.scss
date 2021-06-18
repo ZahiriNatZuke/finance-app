@@ -24,7 +24,7 @@ html, body {
 
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 .full-width {
@@ -107,6 +107,10 @@ body {
 
 .mr-10 {
   margin-right: 10px !important;
+}
+
+.mb-15 {
+  margin-bottom: 15px !important;
 }
 
 .cursor-pointer {

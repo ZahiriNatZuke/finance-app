@@ -4,10 +4,10 @@
     <app-brand-logo [bg]="'white'"></app-brand-logo>
   </div>
 
-  <div fxLayout.gt-sm="row" fxLayout.lt-md="column" fxLayoutAlign.gt-sm="space-around center" fxLayoutGap.lt-md="15px"
+  <div fxLayout.gt-sm="row" fxLayout.lt-md="column" fxLayoutAlign.gt-sm="space-around center"
        fxLayoutAlign.lt-md="start start" ngClass.gt-sm="full-width mt-40" ngClass.lt-md="full-width pl-10">
 
-    <div fxLayout="row" fxLayoutAlign="center start" class="icon-info">
+    <div fxLayout="row" fxLayoutAlign="center start" ngClass.gt-sm="icon-info" ngClass.lt-md="icon-info mb-15">
       <mat-icon class="icon-footer">location_on</mat-icon>
       <div class="spacer-v-footer" fxShow="true" fxHide.lt-md></div>
       <div class="spacer-v-footer" fxShow="true" fxHide.gt-sm [style.height.px]="80"></div>
