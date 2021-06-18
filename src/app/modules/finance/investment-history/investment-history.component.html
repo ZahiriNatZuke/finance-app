@@ -56,17 +56,18 @@
         {{'finance.filter.label' | translate}}
       </span>
         <mat-form-field appearance="outline" class="pl-10">
-          <mat-select>
-            <mat-option value="Fecha Entrada">
+          <mat-select (valueChange)="catchFilterChange($event)">
+            <mat-option value="none"></mat-option>
+            <mat-option value="start_date">
               {{'finance.filter.start-date' | translate}}
             </mat-option>
-            <mat-option value="Fecha Salida">
+            <mat-option value="end_date">
               {{'finance.filter.end-date' | translate}}
             </mat-option>
-            <mat-option value="Tipo Operación">
+            <mat-option value="kind_operation">
               {{'finance.filter.kind-op' | translate}}
             </mat-option>
-            <mat-option value="Rentabilidad Optenida">
+            <mat-option value="obj_profitability">
               {{'finance.filter.profitability-obtained' | translate}}
             </mat-option>
           </mat-select>
@@ -74,7 +75,7 @@
       </div>
     </div>
 
-    <div class="panel mat-elevation-z6" *ngFor="let record of data?.closed_investment_history">
+    <div class="panel mat-elevation-z6" *ngFor="let record of closedInvestmentHistory">
 
       <div class="header-panel full-width" fxLayout="row" fxLayoutAlign="space-between center">
         <div fxLayout="row" fxLayoutAlign="start center">

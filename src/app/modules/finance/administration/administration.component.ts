@@ -4,7 +4,6 @@ import {ColumnType} from '../../shared/modules/dynamic-table/utils/interfaces/co
 import {DynamicTableService} from '../../shared/modules/dynamic-table/dynamic-table.service';
 import {OperationEvent, TypeOpEvent} from '../../shared/modules/dynamic-table/utils/interfaces/operation-event';
 import {ApiHelpers} from '../../shared/utils/api.helpers';
-import {TranslateService} from '@ngx-translate/core';
 
 const apiHelpers = new ApiHelpers();
 
@@ -20,8 +19,7 @@ export class AdministrationComponent implements OnInit, AfterContentChecked {
   public inputConfig: InputConfig | undefined;
   public showLoader: boolean = false;
 
-  constructor(private dynamicTableService: DynamicTableService, private changeDetectorRef: ChangeDetectorRef,
-              private translate: TranslateService) {
+  constructor(private dynamicTableService: DynamicTableService, private changeDetectorRef: ChangeDetectorRef) {
     this.dynamicTableService.configTable = this.setUpConfigurations;
     this.dynamicTableService.loadingObservable.subscribe(status => this.showLoader = status);
   }

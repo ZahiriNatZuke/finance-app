@@ -127,12 +127,12 @@ export class DynamicTableComponent implements OnInit {
 
   public option(Operation: TypeOpEvent, value?: number | string | any): void {
     if (Operation === TypeOpEvent.Delete) {
-      const dialogRef = this.dialog.open(ConfirmMessageComponent);
+      const dialogRef = this.dialog.open(ConfirmMessageComponent, {disableClose: true});
       dialogRef.afterClosed().subscribe(result => {
-        if (result) this.operationEvent.emit({type: Operation, value: value || null});
+        if (result) this.operationEvent.emit({type: Operation, value});
       });
     } else {
-      this.operationEvent.emit({type: Operation, value: value || null});
+      this.operationEvent.emit({type: Operation, value});
     }
   }
 

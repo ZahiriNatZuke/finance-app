@@ -3,7 +3,8 @@ export interface InvestmentHistoryDto {
   closed_investment_history: ClosedInvestmentHistory[]
 }
 
-interface ClosedInvestmentHistory {
+export interface ClosedInvestmentHistory {
+  order?: number,
   logo: string,
   company_name: string,
   investment: number,

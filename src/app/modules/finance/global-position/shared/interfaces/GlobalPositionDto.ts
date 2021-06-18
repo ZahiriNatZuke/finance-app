@@ -3,7 +3,8 @@ export interface GlobalPositionDto {
   active_investments: ActiveInvestment[]
 }
 
-interface ActiveInvestment {
+export interface ActiveInvestment {
+  order?: number,
   logo: string,
   company_name: string,
   investment: number,

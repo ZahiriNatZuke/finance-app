@@ -9,11 +9,11 @@
       "logo": "assets/img/logo-company.png",
       "company_name": "Europa Avenida (MTC)",
       "investment": 100000,
-      "obj_profitability": 0.09,
+      "obj_profitability": 0.10,
       "accrued_profit": 10546,
       "kind_operation": "Prestamo con Garantía Hipotecaría",
-      "start_date": "Tue Jun 15 2021 12:01:00 GMT-0400",
-      "end_date": "Tue Jun 15 2021 12:01:00 GMT-0400"
+      "start_date": "Tue Jun 15 2015 12:01:00 GMT-0400",
+      "end_date": "Tue Jun 15 2020 12:01:00 GMT-0400"
     },
     {
       "logo": "assets/img/logo-company.png",
@@ -22,18 +22,18 @@
       "obj_profitability": 0.09,
       "accrued_profit": 10546,
       "kind_operation": "Prestamo con Garantía Hipotecaría",
-      "start_date": "Tue Jun 15 2021 12:01:00 GMT-0400",
-      "end_date": "Tue Jun 15 2021 12:01:00 GMT-0400"
+      "start_date": "Tue Jun 10 2012 12:01:00 GMT-0400",
+      "end_date": "Tue Jun 5 2021 12:01:00 GMT-0400"
     },
     {
       "logo": "assets/img/logo-company.png",
       "company_name": "Europa Avenida (MTC)",
       "investment": 100000,
-      "obj_profitability": 0.09,
+      "obj_profitability": 0.05,
       "accrued_profit": 10546,
       "kind_operation": "Prestamo con Garantía Hipotecaría",
-      "start_date": "Tue Jun 15 2021 12:01:00 GMT-0400",
-      "end_date": "Tue Jun 15 2021 12:01:00 GMT-0400"
+      "start_date": "Tue Jun 1 2020 12:01:00 GMT-0400",
+      "end_date": "Tue Jun 1 2025 12:01:00 GMT-0400"
     }
   ]
 }
