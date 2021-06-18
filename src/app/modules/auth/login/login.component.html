@@ -15,7 +15,7 @@
           <input matInput [placeholder]="'auth.login.user' | translate" type="text" autocomplete="email"
                  formControlName="user">
           <mat-error *ngIf="loginForm.get('user')?.hasError('required')">
-            <span ngClass.lt-md="black-color">{{'auth.login.error.required.user' | translate}}</span>
+            <span>{{'auth.login.error.required.user' | translate}}</span>
           </mat-error>
         </mat-form-field>
 
@@ -27,16 +27,17 @@
           <input matInput [placeholder]="'auth.login.password' | translate" [type]="hidePwd ? 'password' : 'text'"
                  autocomplete="current-password" formControlName="password" (keydown.enter)="$event.preventDefault()">
           <mat-error *ngIf="loginForm.get('password')?.hasError('required')">
-            <span ngClass.lt-md="black-color">{{'auth.login.error.required.password' | translate}}</span>
+            <span>{{'auth.login.error.required.password' | translate}}</span>
           </mat-error>
           <mat-error *ngIf="loginForm.get('password')?.hasError('minlength')">
-            <span ngClass.lt-md="black-color">{{'auth.login.error.minlength.password' | translate}}</span>
+            <span>{{'auth.login.error.minlength.password' | translate}}</span>
           </mat-error>
         </mat-form-field>
       </mat-card-content>
 
       <mat-card-actions fxLayout="row" fxLayoutAlign="center center" class="px-20">
-        <button mat-raised-button class="full-width white-color" color="primary" [disabled]="loginForm.invalid" type="submit">
+        <button mat-raised-button [class]="loginForm.valid ? 'full-width white-color' : 'full-width black-color-50'"
+                color="primary" [disabled]="loginForm.invalid" type="submit">
           {{'auth.login.submit' | translate}}
         </button>
       </mat-card-actions>

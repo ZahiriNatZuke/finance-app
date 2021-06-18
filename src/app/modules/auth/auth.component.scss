@@ -16,3 +16,8 @@
   min-width: 50%;
   min-height: 50%;
 }
+
+.blur {
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
+}
