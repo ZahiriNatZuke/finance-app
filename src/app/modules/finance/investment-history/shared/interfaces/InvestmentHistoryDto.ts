@@ -1,3 +1,5 @@
+import {FinanceTypeOperationEnum} from '../../../shared/interfaces/finance-type-operation.enum';
+
 export interface InvestmentHistoryDto {
   resume_investment_history: ResumeInvestmentHistory,
   closed_investment_history: ClosedInvestmentHistory[]
@@ -10,7 +12,7 @@ export interface ClosedInvestmentHistory {
   investment: number,
   obj_profitability: number,
   accrued_profit: number,
-  kind_operation: string,
+  kind_operation: FinanceTypeOperationEnum,
   start_date: string,
   end_date: string
 }

@@ -75,6 +75,9 @@
     },
     "personal-data": {
       "info": "Si deseas modificar tus datos personales ponte en contacto con nosotros en el teléfono 911 548 520."
+    },
+    "type-operation": {
+      "home-equity-loan": "Préstamo con Garantía Hipotecaría"
     }
   },
   "error": {

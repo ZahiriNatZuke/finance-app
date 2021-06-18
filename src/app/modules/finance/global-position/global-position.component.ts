@@ -16,7 +16,7 @@ export class GlobalPositionComponent implements OnInit {
   public showLoader: boolean = false;
   public activeInvestments: ActiveInvestment[] = [];
 
-  constructor(private _httpClient: HttpClient, private utils: UtilsService) {
+  constructor(private _httpClient: HttpClient, public utils: UtilsService) {
     this.showLoader = true;
     this._httpClient.get<GlobalPositionDto>(apiHelpers.getGlobalPositionDataURL())
       .subscribe((res: GlobalPositionDto) => {

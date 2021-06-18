@@ -1,3 +1,5 @@
+import {FinanceTypeOperationEnum} from '../../../shared/interfaces/finance-type-operation.enum';
+
 export interface GlobalPositionDto {
   position_global: PositionGlobal,
   active_investments: ActiveInvestment[]
@@ -16,7 +18,7 @@ export interface ActiveInvestment {
 }
 
 interface HistoryDetail {
-  kind_operation: string,
+  kind_operation: FinanceTypeOperationEnum,
   start_date: string,
   end_date: string
 }

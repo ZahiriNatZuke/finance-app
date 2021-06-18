@@ -16,7 +16,7 @@ export class InvestmentHistoryComponent implements OnInit {
   public showLoader: boolean = false;
   public closedInvestmentHistory: ClosedInvestmentHistory[] = [];
 
-  constructor(private _httpClient: HttpClient, private utils: UtilsService) {
+  constructor(private _httpClient: HttpClient, public utils: UtilsService) {
     this.showLoader = true;
     this._httpClient.get<InvestmentHistoryDto>(apiHelpers.getInvestmentHistoryDataURL())
       .subscribe((res: InvestmentHistoryDto) => {

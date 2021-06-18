@@ -16,12 +16,12 @@
       "end_date": "Tue Jun 15 2025 12:01:00 GMT-0400",
       "history_detail": [
         {
-          "kind_operation": "Prestamo con Garantía Hipotecaría",
+          "kind_operation": 0,
           "start_date": "Tue Jun 15 2021 12:01:00 GMT-0400",
           "end_date": "Tue Jun 15 2021 12:01:00 GMT-0400"
         },
         {
-          "kind_operation": "Prestamo con Garantía Hipotecaría",
+          "kind_operation": 0,
           "start_date": "Tue Jun 15 2021 12:01:00 GMT-0400",
           "end_date": "Tue Jun 15 2021 12:01:00 GMT-0400"
         }
@@ -37,17 +37,17 @@
       "end_date": "Tue Jun 15 2015 12:01:00 GMT-0400",
       "history_detail": [
         {
-          "kind_operation": "Prestamo con Garantía Hipotecaría",
+          "kind_operation": 0,
           "start_date": "Tue Jun 15 2021 12:01:00 GMT-0400",
           "end_date": "Tue Jun 15 2021 12:01:00 GMT-0400"
         },
         {
-          "kind_operation": "Prestamo con Garantía Hipotecaría",
+          "kind_operation": 0,
           "start_date": "Tue Jun 15 2021 12:01:00 GMT-0400",
           "end_date": "Tue Jun 15 2021 12:01:00 GMT-0400"
         },
         {
-          "kind_operation": "Prestamo con Garantía Hipotecaría",
+          "kind_operation": 0,
           "start_date": "Tue Jun 15 2021 12:01:00 GMT-0400",
           "end_date": "Tue Jun 15 2021 12:01:00 GMT-0400"
         }
@@ -63,7 +63,7 @@
       "end_date": "Tue Jun 15 2023 12:01:00 GMT-0400",
       "history_detail": [
         {
-          "kind_operation": "Prestamo con Garantía Hipotecaría",
+          "kind_operation": 0,
           "start_date": "Tue Jun 15 2021 12:01:00 GMT-0400",
           "end_date": "Tue Jun 15 2021 12:01:00 GMT-0400"
         }
@@ -79,17 +79,17 @@
       "end_date": "Tue Jun 15 2018 12:01:00 GMT-0400",
       "history_detail": [
         {
-          "kind_operation": "Prestamo con Garantía Hipotecaría",
+          "kind_operation": 0,
           "start_date": "Tue Jun 15 2021 12:01:00 GMT-0400",
           "end_date": "Tue Jun 15 2021 12:01:00 GMT-0400"
         },
         {
-          "kind_operation": "Prestamo con Garantía Hipotecaría",
+          "kind_operation": 0,
           "start_date": "Tue Jun 15 2021 12:01:00 GMT-0400",
           "end_date": "Tue Jun 15 2021 12:01:00 GMT-0400"
         },
         {
-          "kind_operation": "Prestamo con Garantía Hipotecaría",
+          "kind_operation": 0,
           "start_date": "Tue Jun 15 2021 12:01:00 GMT-0400",
           "end_date": "Tue Jun 15 2021 12:01:00 GMT-0400"
         }

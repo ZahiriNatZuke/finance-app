@@ -73,6 +73,9 @@
     },
     "personal-data": {
       "info": "If you wish to modify your personal data, please contact us at 911 548 520."
+    },
+    "type-operation": {
+      "home-equity-loan": "Home Equity Loan"
     }
   },
   "error": {

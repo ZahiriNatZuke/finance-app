@@ -1,4 +1,5 @@
 import {Injectable} from '@angular/core';
+import {FinanceTypeOperationEnum} from '../../../finance/shared/interfaces/finance-type-operation.enum';
 
 @Injectable({providedIn: 'root'})
 export class UtilsService {
@@ -19,6 +20,13 @@ export class UtilsService {
       } else {
         return array.sort((a, b) => (a[field] < b[field]) ? -1 : 1);
       }
+    }
+  }
+
+  public getFinanceTypeOperation(data: FinanceTypeOperationEnum): string {
+    switch (data) {
+      case FinanceTypeOperationEnum.HomeEquityLoan:
+        return 'finance.type-operation.home-equity-loan';
     }
   }
 }

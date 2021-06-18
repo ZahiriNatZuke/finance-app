@@ -98,7 +98,8 @@
         <ul class="history-detail">
           <li fxLayout="row" fxLayoutAlign="space-between center" *ngFor="let record of investment.history_detail">
             <span>
-              <b>{{'finance.global-position.kind-op' | translate}}</b> {{record.kind_operation}}
+              <b>{{'finance.global-position.kind-op' | translate}}</b>
+              {{utils.getFinanceTypeOperation(record.kind_operation) | translate}}
             </span>
             <div fxLayout="row" fxLayoutAlign="space-around center" class="width-50">
               <span>

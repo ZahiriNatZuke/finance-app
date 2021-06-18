@@ -104,7 +104,8 @@
       <div class="history-detail-container">
         <div class="history-detail" fxLayout="row" fxLayoutAlign="space-between center">
         <span>
-          <b>{{'finance.investment-history.kind-op' | translate}}</b> {{record.kind_operation}}
+          <b>{{'finance.investment-history.kind-op' | translate}}</b>
+          {{utils.getFinanceTypeOperation(record.kind_operation) | translate}}
         </span>
           <div fxLayout="row" fxLayoutAlign="space-around center" class="width-50">
           <span>
