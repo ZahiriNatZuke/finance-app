@@ -29,4 +29,8 @@ export class UtilsService {
         return 'finance.type-operation.home-equity-loan';
     }
   }
+
+  public getShortFinanceTypeOperation(data: FinanceTypeOperationEnum): string {
+    return this.getFinanceTypeOperation(data) + '_short';
+  }
 }

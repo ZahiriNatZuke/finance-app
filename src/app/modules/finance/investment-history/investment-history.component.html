@@ -157,7 +157,9 @@
       <li class="active-investment-detail mat-elevation-z6" fxLayout="column" fxLayoutAlign="center start"
           *ngFor="let record of data?.closed_investment_history">
         <div fxLayout="row" fxLayoutAlign="start center" class="pb-10">
-          <span class="badge-investment">PGH</span>
+          <span class="badge-investment">
+            {{utils.getShortFinanceTypeOperation(record.kind_operation) | translate}}
+          </span>
           <span class="company-name">{{record.company_name}}</span>
         </div>
         <div fxLayout="row" fxLayoutAlign="space-between center" class="full-width pb-10">
