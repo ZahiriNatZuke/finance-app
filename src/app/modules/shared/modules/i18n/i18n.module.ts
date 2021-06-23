@@ -4,6 +4,7 @@ import { I18nComponent } from './i18n.component';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
+import {FlexLayoutModule} from '@angular/flex-layout';
 
 
 
@@ -18,7 +19,8 @@ import {MatButtonModule} from '@angular/material/button';
         CommonModule,
         MatMenuModule,
         MatIconModule,
-        MatButtonModule
+        MatButtonModule,
+        FlexLayoutModule
     ]
 })
 export class I18nModule { }

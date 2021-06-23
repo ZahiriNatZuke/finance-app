@@ -1,6 +1,6 @@
-<button class="mr-10" *ngIf="icon; else text" mat-button [matMenuTriggerFor]="languageMenu">
+<button ngClass.gt-sm="mr-10" *ngIf="icon; else text" mat-button [matMenuTriggerFor]="languageMenu">
   <span class="current-lang">{{ currentLanguage | uppercase}}</span>
-  <mat-icon>language</mat-icon>
+  <mat-icon fxShow="true" fxHide.lt-md>language</mat-icon>
 </button>
 <ng-template #text>
   <button mat-raised-button color="primary" [matMenuTriggerFor]="languageMenu">
